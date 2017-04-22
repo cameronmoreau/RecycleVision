@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Get video</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -29,6 +27,16 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Use the camera to take pictures of items</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Get video</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Muli-Black.ttf</string>
+		<string>Muli-Bold.ttf</string>
+		<string>Muli-Light.ttf</string>
+		<string>Muli-SemiBold.ttf</string>
+		<string>Muli-Regular.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

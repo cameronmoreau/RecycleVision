@@ -3,10 +3,12 @@ PODS:
   - Parse (1.14.4):
     - Bolts/Tasks (~> 1.8)
   - Spring (1.0.3)
+  - SwiftyCam (2.2.1)
 
 DEPENDENCIES:
   - Parse (~> 1.14.4)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+  - SwiftyCam (~> 2.2.1)
 
 EXTERNAL SOURCES:
   Spring:
@@ -22,7 +24,8 @@ SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  SwiftyCam: 966b67eeab2dfcfd0077eaa3c5a6bd69e1748af0
 
-PODFILE CHECKSUM: 2a746a13bffe961607a31fa24cbaf2c483a860f8
+PODFILE CHECKSUM: 113e98064cc9ff0ba446b274571ef5eec23ab164
 
 COCOAPODS: 1.2.1

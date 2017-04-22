@@ -68,6 +68,7 @@ class LeaderboardTableViewController: UITableViewController {
             cell.rank.text = String(indexPath.row + 1)
         
             
+            
         }
        
         return cell

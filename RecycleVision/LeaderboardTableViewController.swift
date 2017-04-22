@@ -51,14 +51,14 @@ class LeaderboardTableViewController: UITableViewController {
         let reuseIdentifier = "userCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! LeaderboardTableViewCell
         cell.Username.text = userNames[indexPath.row]
+        cell.medal.image = cell.medal.image!.withRenderingMode(.alwaysTemplate)
         
         switch (indexPath.row){
         case 0:
-            cell.medal.image = #imageLiteral(resourceName: "noun_978460_cc")
-            cell.medal.tintColor = UIColor.yellow
+            cell.medal.tintColor = UIColor(red: 0.97, green: 0.78, blue: 0.21, alpha: 1.0)
             cell.rank.text = ""
         case 1:
-            cell.medal.tintColor = UIColor.orange
+            cell.medal.tintColor = UIColor(red: 0.69, green: 0.67, blue: 0.64, alpha: 1.0)
             cell.rank.text = ""
         case 2:
             cell.medal.tintColor = UIColor.brown
@@ -66,9 +66,6 @@ class LeaderboardTableViewController: UITableViewController {
         default:
             cell.medal.isHidden = true
             cell.rank.text = String(indexPath.row + 1)
-        
-            
-            
         }
        
         return cell

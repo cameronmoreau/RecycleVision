@@ -27,6 +27,8 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Use the camera to take pictures of items</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Get video</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Muli-Black.ttf</string>

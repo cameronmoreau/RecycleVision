@@ -14,6 +14,7 @@ class LeaderboardTableViewCell: UITableViewCell {
     @IBOutlet var Username: UILabel!
     @IBOutlet var Usericon: UIImageView!
     @IBOutlet var rank: UILabel!
+    @IBOutlet var medal: UIImageView!
     
     
     override func awakeFromNib() {

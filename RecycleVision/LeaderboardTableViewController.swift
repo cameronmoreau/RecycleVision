@@ -51,9 +51,25 @@ class LeaderboardTableViewController: UITableViewController {
         let reuseIdentifier = "userCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! LeaderboardTableViewCell
         cell.Username.text = userNames[indexPath.row]
-        cell.rank.text = String(indexPath.row)
-        // Configure the cell...
-
+        
+        switch (indexPath.row){
+        case 0:
+            cell.medal.image = #imageLiteral(resourceName: "noun_978460_cc")
+            cell.medal.tintColor = UIColor.yellow
+            cell.rank.text = ""
+        case 1:
+            cell.medal.tintColor = UIColor.orange
+            cell.rank.text = ""
+        case 2:
+            cell.medal.tintColor = UIColor.brown
+            cell.rank.text = ""
+        default:
+            cell.medal.isHidden = true
+            cell.rank.text = String(indexPath.row + 1)
+        
+            
+        }
+       
         return cell
     }
     

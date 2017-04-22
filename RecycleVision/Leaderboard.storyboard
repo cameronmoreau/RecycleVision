@@ -50,15 +50,20 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earthIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fY3-BL-rJP">
-                                    <rect key="frame" x="111" y="6" width="150" height="150"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="150" id="Box-yx-2W9"/>
-                                        <constraint firstAttribute="width" constant="150" id="duW-RO-VhC"/>
-                                    </constraints>
-                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wCt-9v-zyH">
+                                    <rect key="frame" x="112.5" y="35" width="150" height="150"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earthIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fY3-BL-rJP">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="150" id="kc2-zJ-NQi"/>
+                                                <constraint firstAttribute="width" constant="150" id="lwg-FC-O3h"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVo-3j-l7e">
-                                    <rect key="frame" x="24" y="30" width="327" height="100"/>
+                                    <rect key="frame" x="24" y="59" width="327" height="100"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m53-kT-vaG">
                                             <rect key="frame" x="8" y="40" width="112" height="21"/>
@@ -106,13 +111,13 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" red="0.18980919805061064" green="0.23844976420465" blue="0.34847656250000003" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.1901690066" green="0.23690178989999999" blue="0.34892976279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="NVo-3j-l7e" firstAttribute="centerY" secondItem="pV5-gT-Gdy" secondAttribute="centerY" constant="-30" id="35q-zl-wtG"/>
-                                <constraint firstItem="fY3-BL-rJP" firstAttribute="centerY" secondItem="pV5-gT-Gdy" secondAttribute="centerY" constant="-29" id="4vQ-7J-RGu"/>
-                                <constraint firstItem="NVo-3j-l7e" firstAttribute="top" secondItem="pV5-gT-Gdy" secondAttribute="top" constant="30" id="9wt-n5-Ych"/>
-                                <constraint firstItem="fY3-BL-rJP" firstAttribute="centerX" secondItem="pV5-gT-Gdy" secondAttribute="centerX" constant="-1.5" id="QR4-bW-w0d"/>
+                                <constraint firstItem="NVo-3j-l7e" firstAttribute="centerY" secondItem="pV5-gT-Gdy" secondAttribute="centerY" constant="-1" id="35q-zl-wtG"/>
+                                <constraint firstItem="NVo-3j-l7e" firstAttribute="top" secondItem="pV5-gT-Gdy" secondAttribute="top" constant="59" id="9wt-n5-Ych"/>
+                                <constraint firstItem="wCt-9v-zyH" firstAttribute="centerX" secondItem="pV5-gT-Gdy" secondAttribute="centerX" id="QEz-v4-8V3"/>
                                 <constraint firstItem="NVo-3j-l7e" firstAttribute="leading" secondItem="pV5-gT-Gdy" secondAttribute="leading" constant="24" id="RY2-ID-pRa"/>
+                                <constraint firstItem="wCt-9v-zyH" firstAttribute="centerY" secondItem="pV5-gT-Gdy" secondAttribute="centerY" id="XmY-PN-dLg"/>
                                 <constraint firstAttribute="trailing" secondItem="NVo-3j-l7e" secondAttribute="trailing" constant="24" id="oUH-V2-fxb"/>
                             </constraints>
                         </view>
@@ -143,11 +148,15 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoD-wO-Oww">
-                                            <rect key="frame" x="336" y="31.5" width="31" height="22"/>
+                                            <rect key="frame" x="336" y="31" width="31" height="21.5"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noun_978460_cc" translatesAutoresizingMaskIntoConstraints="NO" id="7pi-zf-NNS">
+                                            <rect key="frame" x="3" y="21" width="41" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ZoD-wO-Oww" firstAttribute="centerY" secondItem="A2n-yf-gkO" secondAttribute="centerY" id="LkN-Mf-baU"/>
@@ -157,6 +166,7 @@
                                 <connections>
                                     <outlet property="Usericon" destination="3W4-mK-vxl" id="1CW-f4-BXh"/>
                                     <outlet property="Username" destination="e4k-4u-atl" id="itB-Oz-J0z"/>
+                                    <outlet property="medal" destination="7pi-zf-NNS" id="vER-oO-tVD"/>
                                     <outlet property="points" destination="ZoD-wO-Oww" id="INz-Iw-Npg"/>
                                     <outlet property="rank" destination="Jb3-HK-KYZ" id="NsG-Jj-bfv"/>
                                 </connections>
@@ -182,5 +192,6 @@
     <resources>
         <image name="earthIcon" width="256" height="256"/>
         <image name="noun_972990_cc" width="700" height="700"/>
+        <image name="noun_978460_cc" width="700" height="700"/>
     </resources>
 </document>

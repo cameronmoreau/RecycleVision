@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -25,7 +24,7 @@
                     <tabBarItem key="tabBarItem" title="Leaderboard" id="EDH-EU-OTL"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZF1-zN-gVs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZF1-zN-gVs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -42,7 +41,7 @@
         <scene sceneID="3rc-fq-Jc2">
             <objects>
                 <tableViewController id="9AT-ED-L8b" customClass="LeaderboardTableViewController" customModule="RecycleVision" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" id="de8-ps-bAN">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" id="de8-ps-bAN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,8 +71,11 @@
                                             <color key="textColor" red="0.19016900658607483" green="0.23690178990364075" blue="0.348929762840271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbV-n5-Hps">
-                                            <rect key="frame" x="213" y="39" width="106" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbV-n5-Hps">
+                                            <rect key="frame" x="213" y="39" width="106" height="21.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="106" id="E1o-a3-vUh"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
                                             <color key="textColor" red="0.19016900658607483" green="0.23690178990364075" blue="0.348929762840271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -92,8 +94,8 @@
                                                 <constraint firstAttribute="width" constant="80" id="aS3-rC-8ig"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a93-Dr-dtc">
-                                            <rect key="frame" x="245" y="11" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a93-Dr-dtc">
+                                            <rect key="frame" x="255" y="11" width="32" height="21"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -101,7 +103,9 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.30742636601872325" green="0.83872012867647061" blue="0.82401674078500586" alpha="0.95362311241610742" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
+                                        <constraint firstItem="WbV-n5-Hps" firstAttribute="top" secondItem="a93-Dr-dtc" secondAttribute="bottom" constant="7" id="3dp-IW-dLB"/>
                                         <constraint firstItem="a93-Dr-dtc" firstAttribute="top" secondItem="NVo-3j-l7e" secondAttribute="top" constant="11" id="I4D-b2-bNK"/>
+                                        <constraint firstAttribute="trailing" secondItem="WbV-n5-Hps" secondAttribute="trailing" constant="8" id="Nzz-Sb-vAO"/>
                                         <constraint firstItem="WbV-n5-Hps" firstAttribute="top" secondItem="a93-Dr-dtc" secondAttribute="bottom" constant="7" id="P91-n1-Iyd"/>
                                         <constraint firstAttribute="trailing" secondItem="WbV-n5-Hps" secondAttribute="trailing" constant="8" id="Yyv-tV-vxd"/>
                                         <constraint firstItem="ni2-hs-cqC" firstAttribute="centerX" secondItem="NVo-3j-l7e" secondAttribute="centerX" id="Z0m-Ww-juh"/>
@@ -122,46 +126,43 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="userCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="84" id="bak-Fm-fOd" customClass="LeaderboardTableViewCell" customModule="RecycleVision" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="248" width="375" height="84"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="userCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="60" id="bak-Fm-fOd" customClass="LeaderboardTableViewCell" customModule="RecycleVision" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="248" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bak-Fm-fOd" id="A2n-yf-gkO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="83.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4k-4u-atl">
-                                            <rect key="frame" x="104" y="31" width="186" height="21"/>
+                                            <rect key="frame" x="106" y="19" width="186" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.21568627450980393" green="0.22745098039215686" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb3-HK-KYZ">
-                                            <rect key="frame" x="8" y="25" width="30" height="32"/>
+                                            <rect key="frame" x="10" y="14" width="30" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="25"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.16991844773292542" green="0.68125009536743164" blue="0.57987970113754272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="earthIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3W4-mK-vxl">
-                                            <rect key="frame" x="46" y="16" width="50" height="50"/>
+                                            <rect key="frame" x="48" y="7" width="45" height="45"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoD-wO-Oww">
-                                            <rect key="frame" x="336" y="31" width="31" height="21.5"/>
-                                            <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoD-wO-Oww">
+                                            <rect key="frame" x="338" y="18" width="31" height="21.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
+                                            <color key="textColor" red="0.21568627450980393" green="0.22745098039215686" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noun_978460_cc" translatesAutoresizingMaskIntoConstraints="NO" id="7pi-zf-NNS">
-                                            <rect key="frame" x="3" y="21" width="41" height="40"/>
+                                            <rect key="frame" x="5" y="10" width="41" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="ZoD-wO-Oww" firstAttribute="centerY" secondItem="A2n-yf-gkO" secondAttribute="centerY" id="LkN-Mf-baU"/>
-                                        <constraint firstItem="ZoD-wO-Oww" firstAttribute="trailing" secondItem="A2n-yf-gkO" secondAttribute="trailingMargin" id="fsf-tJ-zyc"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="Usericon" destination="3W4-mK-vxl" id="1CW-f4-BXh"/>

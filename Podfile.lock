@@ -18,6 +18,7 @@ PODS:
     - FBSDKTVOSKit (~> 4.10)
     - Parse (~> 1.12)
   - Spring (1.0.3)
+  - SwiftMessages (3.3.3)
   - SwiftyCam (2.2.1)
 
 DEPENDENCIES:
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - Parse (~> 1.14.4)
   - ParseFacebookUtilsV4 (~> 1.11.1)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
+  - SwiftMessages (~> 3.3.3)
   - SwiftyCam (~> 2.2.1)
 
 EXTERNAL SOURCES:
@@ -45,8 +47,9 @@ SPEC CHECKSUMS:
   Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
   ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
+  SwiftMessages: 09cea3336e3fb63c3578983c8aac65acaa6d884a
   SwiftyCam: 966b67eeab2dfcfd0077eaa3c5a6bd69e1748af0
 
-PODFILE CHECKSUM: 3c38e74bcbeee73ffb31de0e941618081b0aee45
+PODFILE CHECKSUM: ca37dae2f6db1db29617b7fbba1b33ad73e33c22
 
 COCOAPODS: 1.2.1

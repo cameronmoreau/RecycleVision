@@ -15,6 +15,7 @@
 		7E1BAE541EABB5CC000D9007 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1BAE531EABB5CC000D9007 /* Profile.storyboard */; };
 		7E1BAE581EABB5EB000D9007 /* Recycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1BAE571EABB5EB000D9007 /* Recycle.storyboard */; };
 		7E1BAE5B1EABB60D000D9007 /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1BAE5A1EABB60D000D9007 /* Leaderboard.storyboard */; };
+		7E1BAE5D1EABD2C5000D9007 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */; };
 		C2447884B147647BD0FD1C38 /* Pods_RecycleVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517E5B41B8B43E1489D5A4C9 /* Pods_RecycleVision.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		7E1BAE531EABB5CC000D9007 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7E1BAE571EABB5EB000D9007 /* Recycle.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recycle.storyboard; sourceTree = "<group>"; };
 		7E1BAE5A1EABB60D000D9007 /* Leaderboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leaderboard.storyboard; sourceTree = "<group>"; };
+		7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		B55CAB4C2B5FE72BEC746A5B /* Pods-RecycleVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecycleVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecycleVision/Pods-RecycleVision.release.xcconfig"; sourceTree = "<group>"; };
 		D4C9E960E230AB0F700E88FA /* Pods-RecycleVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecycleVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecycleVision/Pods-RecycleVision.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +84,7 @@
 				7E1BAE3C1EABACFF000D9007 /* ViewController.swift */,
 				7E1BAE411EABACFF000D9007 /* Assets.xcassets */,
 				7E1BAE461EABACFF000D9007 /* Info.plist */,
+				7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */,
 			);
 			path = RecycleVision;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E1BAE3D1EABACFF000D9007 /* ViewController.swift in Sources */,
+				7E1BAE5D1EABD2C5000D9007 /* OnboardingViewController.swift in Sources */,
 				7E1BAE3B1EABACFF000D9007 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,12 +1,30 @@
 PODS:
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - FBSDKCoreKit (4.22.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.22.0):
+    - FBSDKCoreKit
   - Parse (1.14.4):
     - Bolts/Tasks (~> 1.8)
+  - ParseFacebookUtilsV4 (1.11.1):
+    - Bolts/Tasks (>= 1.6)
+    - FBSDKCoreKit (~> 4.10)
+    - FBSDKLoginKit (~> 4.10)
+    - FBSDKTVOSKit (~> 4.10)
+    - Parse (~> 1.12)
   - Spring (1.0.3)
   - SwiftyCam (2.2.1)
 
 DEPENDENCIES:
+  - FBSDKCoreKit
+  - FBSDKLoginKit
   - Parse (~> 1.14.4)
+  - ParseFacebookUtilsV4 (~> 1.11.1)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftyCam (~> 2.2.1)
 
@@ -22,10 +40,13 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FBSDKCoreKit: c693bad19feb225469eeff14452ba364522ee48b
+  FBSDKLoginKit: 1fa529fc622d7b32ebeaffbecd377180833c6d30
   Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
+  ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyCam: 966b67eeab2dfcfd0077eaa3c5a6bd69e1748af0
 
-PODFILE CHECKSUM: 113e98064cc9ff0ba446b274571ef5eec23ab164
+PODFILE CHECKSUM: 3c38e74bcbeee73ffb31de0e941618081b0aee45
 
 COCOAPODS: 1.2.1

@@ -10,6 +10,12 @@ import UIKit
 
 class LeaderboardTableViewCell: UITableViewCell {
 
+    @IBOutlet var points: UILabel!
+    @IBOutlet var Username: UILabel!
+    @IBOutlet var Usericon: UIImageView!
+    @IBOutlet var rank: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

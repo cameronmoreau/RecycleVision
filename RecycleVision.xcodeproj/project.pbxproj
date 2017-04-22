@@ -21,6 +21,8 @@
 		868B4DE01EABEAC700F34CC4 /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 868B4DDF1EABEAC700F34CC4 /* Muli-SemiBold.ttf */; };
 		868B4DE21EABEAD000F34CC4 /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 868B4DE11EABEAD000F34CC4 /* Muli-Light.ttf */; };
 		868B4DE41EABEADA00F34CC4 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 868B4DE31EABEADA00F34CC4 /* Muli-Bold.ttf */; };
+		A3DD6E801EABF3A4008DE9AB /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DD6E7F1EABF3A4008DE9AB /* SwiftyRecordButton.swift */; };
+		A3EA79E01EABE70800B5C405 /* RecycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EA79DF1EABE70800B5C405 /* RecycleViewController.swift */; };
 		C2447884B147647BD0FD1C38 /* Pods_RecycleVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517E5B41B8B43E1489D5A4C9 /* Pods_RecycleVision.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		868B4DDF1EABEAC700F34CC4 /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
 		868B4DE11EABEAD000F34CC4 /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
 		868B4DE31EABEADA00F34CC4 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
+		A3DD6E7F1EABF3A4008DE9AB /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
+		A3EA79DF1EABE70800B5C405 /* RecycleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleViewController.swift; sourceTree = "<group>"; };
 		B55CAB4C2B5FE72BEC746A5B /* Pods-RecycleVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecycleVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecycleVision/Pods-RecycleVision.release.xcconfig"; sourceTree = "<group>"; };
 		D4C9E960E230AB0F700E88FA /* Pods-RecycleVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecycleVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecycleVision/Pods-RecycleVision.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				7E1BAE571EABB5EB000D9007 /* Recycle.storyboard */,
+				A3EA79DF1EABE70800B5C405 /* RecycleViewController.swift */,
+				A3DD6E7F1EABF3A4008DE9AB /* SwiftyRecordButton.swift */,
 			);
 			name = Recycle;
 			sourceTree = "<group>";
@@ -198,7 +204,7 @@
 				TargetAttributes = {
 					7E1BAE361EABACFF000D9007 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = ML66LL2664;
+						DevelopmentTeam = D782EMYT99;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -294,6 +300,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3EA79E01EABE70800B5C405 /* RecycleViewController.swift in Sources */,
+				A3DD6E801EABF3A4008DE9AB /* SwiftyRecordButton.swift in Sources */,
 				7E1BAE3D1EABACFF000D9007 /* ViewController.swift in Sources */,
 				865AC0B51EABECC800DAA980 /* LeaderboardTableViewCell.swift in Sources */,
 				7E1BAE3B1EABACFF000D9007 /* AppDelegate.swift in Sources */,
@@ -423,11 +431,13 @@
 			baseConfigurationReference = D4C9E960E230AB0F700E88FA /* Pods-RecycleVision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ML66LL2664;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = D782EMYT99;
 				INFOPLIST_FILE = RecycleVision/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mobi.idappthat.RecycleVision;
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.idappthat.RecycleVisionHack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -437,11 +447,13 @@
 			baseConfigurationReference = B55CAB4C2B5FE72BEC746A5B /* Pods-RecycleVision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ML66LL2664;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = D782EMYT99;
 				INFOPLIST_FILE = RecycleVision/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mobi.idappthat.RecycleVision;
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.idappthat.RecycleVisionHack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -15,6 +15,7 @@
 		7E1BAE541EABB5CC000D9007 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1BAE531EABB5CC000D9007 /* Profile.storyboard */; };
 		7E1BAE581EABB5EB000D9007 /* Recycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1BAE571EABB5EB000D9007 /* Recycle.storyboard */; };
 		7E1BAE5B1EABB60D000D9007 /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1BAE5A1EABB60D000D9007 /* Leaderboard.storyboard */; };
+		7E1BAE5D1EABD2C5000D9007 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */; };
 		865AC0B51EABECC800DAA980 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865AC0B41EABECC800DAA980 /* LeaderboardTableViewCell.swift */; };
 		868B4DD01EABD05F00F34CC4 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B4DCF1EABD05F00F34CC4 /* LeaderboardTableViewController.swift */; };
 		868B4DDE1EABEA9D00F34CC4 /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 868B4DDD1EABEA9D00F34CC4 /* Muli-Regular.ttf */; };
@@ -38,6 +39,7 @@
 		7E1BAE531EABB5CC000D9007 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		7E1BAE571EABB5EB000D9007 /* Recycle.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recycle.storyboard; sourceTree = "<group>"; };
 		7E1BAE5A1EABB60D000D9007 /* Leaderboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leaderboard.storyboard; sourceTree = "<group>"; };
+		7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		865AC0B41EABECC800DAA980 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		868B4DCF1EABD05F00F34CC4 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
 		868B4DDD1EABEA9D00F34CC4 /* Muli-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Regular.ttf"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				7E1BAE3C1EABACFF000D9007 /* ViewController.swift */,
 				7E1BAE411EABACFF000D9007 /* Assets.xcassets */,
 				7E1BAE461EABACFF000D9007 /* Info.plist */,
+				7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */,
 			);
 			path = RecycleVision;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				A3EA79E01EABE70800B5C405 /* RecycleViewController.swift in Sources */,
 				A3DD6E801EABF3A4008DE9AB /* SwiftyRecordButton.swift in Sources */,
 				7E1BAE3D1EABACFF000D9007 /* ViewController.swift in Sources */,
+				7E1BAE5D1EABD2C5000D9007 /* OnboardingViewController.swift in Sources */,
 				865AC0B51EABECC800DAA980 /* LeaderboardTableViewCell.swift in Sources */,
 				7E1BAE3B1EABACFF000D9007 /* AppDelegate.swift in Sources */,
 				868B4DD01EABD05F00F34CC4 /* LeaderboardTableViewController.swift in Sources */,

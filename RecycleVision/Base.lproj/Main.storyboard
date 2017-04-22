@@ -39,6 +39,14 @@
                                     <segue destination="qBG-Z6-cvZ" kind="showDetail" id="zm1-jp-TAi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BR-Ik-53H">
+                                <rect key="frame" x="149" y="357" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="RL3-3L-rHh" eventType="touchUpInside" id="WdL-pQ-pJD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -50,6 +58,9 @@
                             <constraint firstItem="DAI-s9-j7a" firstAttribute="trailing" secondItem="aVH-G2-VNr" secondAttribute="trailingMargin" id="muL-wb-5Cs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="facebookLoginButton" destination="uTF-kT-V5m" id="rxt-yG-dxh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4L-ib-T9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,19 +7,45 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import ParseFacebookUtilsV4
 
-class OnboardingViewController: UIViewController {
+class OnboardingViewController: UIViewController, FBSDKLoginButtonDelegate {
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        PFFacebookUtils.logInInBackground(withReadPermissions: ["email", "public_profile"]) { (user, error) in
+            
+            if let error = error {
+                print("There was an error")
+                print(error)
+            }
+            
+            if let user = user {
+                print("WE got the user")
+                print(user)
+            }
+        }
+    }
+    
+    @IBOutlet weak var facebookLoginButton: FBSDKLoginButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        facebookLoginButton.readPermissions = ["email", "public_profile"]
+        facebookLoginButton.delegate = self
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - Facebook
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error?) {
+        print("LOGGEDIN")
+        print(FBSDKAccessToken.current())
+        print(result)
     }
     
-    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        //try? FIRAuth.auth()?.signOut()
+        print("login")
+    }
 }
 

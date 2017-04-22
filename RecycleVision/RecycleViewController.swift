@@ -24,12 +24,14 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
     }
     
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
+        let cardViewController = self.storyboard?.instantiateViewController(withIdentifier: "CardViewController") as! CardViewController
         captureButton.growButton()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {
             self.captureButton.shrinkButton()
         })
         
+        self.present(cardViewController, animated: true, completion: nil)
         print("IT TOOK THE PICTURE")
     }
     

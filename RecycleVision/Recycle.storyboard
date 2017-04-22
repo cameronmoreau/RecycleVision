@@ -34,6 +34,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mb4-NS-T8O" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Recycle" id="AZv-F2-2KP"/>
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fUI-6d-wWG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

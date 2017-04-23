@@ -22,9 +22,21 @@ class CardViewController: UIViewController {
     
     var materialImage = ( #imageLiteral(resourceName: "radio"), #imageLiteral(resourceName: "plasticBottle"), #imageLiteral(resourceName: "cardboard") )
     
-    var materialDescription = ("I'll fill this in later...maybe")
+    var materialDescription = ("Without scrap recycling, more mining would be required. ",
+                               "Each ton of recycled paper can save 17 trees!",
+                               "Recycling cardboard only takes 75% of the engery need than making new cardboard",
+                               "Glass is fully recyclable. It can be recycled over and over again without losing purity",
+                               "Only 23% of plastic bottles are recycled each year.",
+                               "Some light bulbs can be hazardous if broken. Be careful!",
+                               "Batteries contain toxic heavy metals which are dangerous when thrown into a landfil ")
     
-    var materiallocation = ("FIND IT YOURSELF!")
+    var materiallocation = ("Recycle Bin",
+                            "Recycle Bin",
+                            "Recycle Bin or Compost",
+                            "Recycle Bin",
+                            "Recycle Bin",
+                            "Garbage Can",
+                            "Dallas County Home Chemical Collection Center")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +45,7 @@ class CardViewController: UIViewController {
         case material.0:
             materialIcon.image = materialImage.0
             materialName.text = material.0
+           
         case material.1:
             materialIcon.image = materialImage.1
             materialName.text = material.1

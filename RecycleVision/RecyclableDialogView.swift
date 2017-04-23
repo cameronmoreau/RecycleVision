@@ -11,8 +11,13 @@ import SwiftMessages
 
 class RecyclableDialogView: MessageView {
     
+
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     var cancelAction: (() -> Void)?
     var MoreInfoAction: (() -> Void)?
+    
     @IBAction func cancel() {
         cancelAction?()
     }

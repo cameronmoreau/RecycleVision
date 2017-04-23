@@ -15,12 +15,16 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
    
     var captureButton: SwiftyRecordButton!
     
-    static func demoCustomNib() {
+    static func demoCustomNib(title: String, body: String) {
         
         let view: RecyclableDialogView = try! SwiftMessages.viewFromNib()
         view.configureDropShadow()
         view.cancelAction = { _ in SwiftMessages.hide() }
         view.MoreInfoAction = { SwiftMessages.hide() }
+        view.headerLabel.text = title
+        view.descriptionLabel.text = body
+        
+        
         var config = SwiftMessages.defaultConfig
         config.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
         config.duration = .forever
@@ -61,16 +65,22 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
         userPhoto["user"] = PFUser.current()
         userPhoto["imageFile"] = imageFile
         userPhoto.saveInBackground { (saved, error) in
-            self.captureButton.setLoading(loading: false)
             
             if error == nil {
                 if let file = userPhoto["imageFile"] as? PFFile {
                     PFCloud.callFunction(inBackground: "Classify", withParameters: ["url": file.url], block: { (data, error) in
-                        print(data)
-                        print(error)
+                        
+                        self.captureButton.setLoading(loading: false)
+                        
+                        if let data = data as? [String:Any] {
+                            let pass = data["isRecycleable"] as? Bool ?? false
+                            let title = pass ? "It's Recyclable!" : "Nope!"
+                            let body = pass ? "Great job!" : "You suck"
+                            
+                            RecycleViewController.demoCustomNib(title: title, body: body)
+                        }
                     })
                 }
-                RecycleViewController.demoCustomNib()
             }
         }
 

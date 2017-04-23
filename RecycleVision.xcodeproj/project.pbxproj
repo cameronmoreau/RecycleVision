@@ -16,6 +16,7 @@
 		7E1BAE581EABB5EB000D9007 /* Recycle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1BAE571EABB5EB000D9007 /* Recycle.storyboard */; };
 		7E1BAE5B1EABB60D000D9007 /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1BAE5A1EABB60D000D9007 /* Leaderboard.storyboard */; };
 		7E1BAE5D1EABD2C5000D9007 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */; };
+		7E372C991EAC3974004F15C8 /* PFUserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E372C981EAC3974004F15C8 /* PFUserExtension.swift */; };
 		865AC0B51EABECC800DAA980 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865AC0B41EABECC800DAA980 /* LeaderboardTableViewCell.swift */; };
 		868B4DD01EABD05F00F34CC4 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B4DCF1EABD05F00F34CC4 /* LeaderboardTableViewController.swift */; };
 		868B4DDE1EABEA9D00F34CC4 /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 868B4DDD1EABEA9D00F34CC4 /* Muli-Regular.ttf */; };
@@ -40,6 +41,7 @@
 		7E1BAE571EABB5EB000D9007 /* Recycle.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recycle.storyboard; sourceTree = "<group>"; };
 		7E1BAE5A1EABB60D000D9007 /* Leaderboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leaderboard.storyboard; sourceTree = "<group>"; };
 		7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		7E372C981EAC3974004F15C8 /* PFUserExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFUserExtension.swift; sourceTree = "<group>"; };
 		865AC0B41EABECC800DAA980 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		868B4DCF1EABD05F00F34CC4 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
 		868B4DDD1EABEA9D00F34CC4 /* Muli-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Regular.ttf"; sourceTree = "<group>"; };
@@ -94,13 +96,13 @@
 		7E1BAE391EABACFF000D9007 /* RecycleVision */ = {
 			isa = PBXGroup;
 			children = (
+				7E372C971EAC395A004F15C8 /* Extensions */,
 				7E1BAE501EABB1FE000D9007 /* Models */,
 				7E1BAE4F1EABB1E4000D9007 /* Scenes */,
 				7E1BAE3A1EABACFF000D9007 /* AppDelegate.swift */,
 				7E1BAE3C1EABACFF000D9007 /* ViewController.swift */,
 				7E1BAE411EABACFF000D9007 /* Assets.xcassets */,
 				7E1BAE461EABACFF000D9007 /* Info.plist */,
-				7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */,
 			);
 			path = RecycleVision;
 			sourceTree = "<group>";
@@ -144,6 +146,7 @@
 		7E1BAE521EABB39A000D9007 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */,
 				7E1BAE431EABACFF000D9007 /* LaunchScreen.storyboard */,
 				7E1BAE3E1EABACFF000D9007 /* Main.storyboard */,
 			);
@@ -162,6 +165,14 @@
 				865AC0B41EABECC800DAA980 /* LeaderboardTableViewCell.swift */,
 			);
 			name = Leaderboard;
+			sourceTree = "<group>";
+		};
+		7E372C971EAC395A004F15C8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7E372C981EAC3974004F15C8 /* PFUserExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		862FED5449778EBE623389FC /* Frameworks */ = {
@@ -305,6 +316,7 @@
 			files = (
 				A3EA79E01EABE70800B5C405 /* RecycleViewController.swift in Sources */,
 				A3DD6E801EABF3A4008DE9AB /* SwiftyRecordButton.swift in Sources */,
+				7E372C991EAC3974004F15C8 /* PFUserExtension.swift in Sources */,
 				7E1BAE3D1EABACFF000D9007 /* ViewController.swift in Sources */,
 				7E1BAE5D1EABD2C5000D9007 /* OnboardingViewController.swift in Sources */,
 				865AC0B51EABECC800DAA980 /* LeaderboardTableViewCell.swift in Sources */,

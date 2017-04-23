@@ -28,6 +28,14 @@ class OnboardingViewController: UIViewController, FBSDKLoginButtonDelegate {
         facebookLoginButton.delegate = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if PFUser.current() != nil {
+            self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+        }
+    }
+    
     func showErorrMessage() {
         let error = MessageView.viewFromNib(layout: .CardView)
         error.configureTheme(.error)
@@ -52,8 +60,6 @@ class OnboardingViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        //try? FIRAuth.auth()?.signOut()
-        print("login")
         PFUser.logOutInBackground()
     }
     

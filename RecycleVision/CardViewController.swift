@@ -14,6 +14,12 @@ class CardViewController: UIViewController {
     
     @IBAction func sharePressed(_ sender: UIBarButtonItem) {
         
+        
+        
+    }
+    @IBAction func locationsPressed(_ sender: UIButton) {
+        
+        
         let q = "Recycle%20Dropoff"
         let url = URL(string: "http://maps.apple.com/?q=\(q)")!
         

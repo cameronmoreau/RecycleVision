@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="RecycleViewController" id="Xnd-Bn-ad3" userLabel="Card View" customClass="RecyclableDialogView" customModule="RecycleVision" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="559" height="309"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfV-Bn-J2F" userLabel="Background view">
+                    <rect key="frame" x="18" y="18" width="531" height="281"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i5y-TV-t2j" userLabel="Content view">
+                            <rect key="frame" x="16" y="16" width="499" height="249"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vm7-O6-53t">
+                                    <rect key="frame" x="0.0" y="0.0" width="499" height="38"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="It's Recyclable!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpD-aI-X9T">
+                                            <rect key="frame" x="146" y="0.0" width="207" height="38"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <bool key="isElement" value="NO"/>
+                                            </accessibility>
+                                            <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="30"/>
+                                            <color key="textColor" red="0.1699184477" green="0.68125009540000003" blue="0.57987970109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jxb-1X-i6j">
+                                    <rect key="frame" x="0.0" y="115.5" width="499" height="20.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Job! Plastic is super recyclable. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQd-R1-OwN">
+                                            <rect key="frame" x="0.0" y="0.0" width="499" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.98691188921180406" green="1" blue="0.98448209946710807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="aVS-eI-3T0">
+                                    <rect key="frame" x="0.0" y="213" width="499" height="36"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="QI4-PG-7Jk">
+                                            <rect key="frame" x="315" y="0.0" width="184" height="36"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZG-7M-1o4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="More Info">
+                                                        <color key="titleColor" red="0.1699184477" green="0.68125009540000003" blue="0.57987970109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="moreInfo" destination="Xnd-Bn-ad3" eventType="touchUpInside" id="EPI-nN-4ja"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLL-87-P4T">
+                                                    <rect key="frame" x="80" y="0.0" width="104" height="36"/>
+                                                    <color key="backgroundColor" red="0.1699184477" green="0.68125009540000003" blue="0.57987970109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                                    <state key="normal" title="Cool, Thanks">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="cancel" destination="Xnd-Bn-ad3" eventType="touchUpInside" id="1NQ-G4-c5P"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.11327563412549481" green="0.25762848620637191" blue="0.35640625000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="i5y-TV-t2j" firstAttribute="top" secondItem="tfV-Bn-J2F" secondAttribute="top" constant="16" id="07b-tz-gY5"/>
+                        <constraint firstAttribute="bottom" secondItem="i5y-TV-t2j" secondAttribute="bottom" constant="16" id="MUQ-FC-iMN"/>
+                        <constraint firstItem="i5y-TV-t2j" firstAttribute="leading" secondItem="tfV-Bn-J2F" secondAttribute="leading" constant="16" id="gg6-Vi-jJY"/>
+                        <constraint firstAttribute="trailing" secondItem="i5y-TV-t2j" secondAttribute="trailing" constant="16" id="utr-U1-bhj"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tfV-Bn-J2F" firstAttribute="leading" secondItem="Xnd-Bn-ad3" secondAttribute="leadingMargin" constant="10" id="99Q-Ba-Qmx"/>
+                <constraint firstItem="tfV-Bn-J2F" firstAttribute="top" secondItem="Xnd-Bn-ad3" secondAttribute="topMargin" constant="10" id="YIk-Sa-JAx"/>
+                <constraint firstAttribute="bottom" secondItem="tfV-Bn-J2F" secondAttribute="bottom" constant="10" id="gI3-sP-3wb"/>
+                <constraint firstAttribute="trailing" secondItem="tfV-Bn-J2F" secondAttribute="trailing" constant="10" id="gT4-BD-09N"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="bounceAnimationOffset">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="statusBarOffset">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="backgroundView" destination="tfV-Bn-J2F" id="jzo-KY-232"/>
+                <outlet property="bodyLabel" destination="cpD-aI-X9T" id="Wwx-qu-18g"/>
+            </connections>
+            <point key="canvasLocation" x="27.5" y="567.5"/>
+        </view>
+    </objects>
+</document>

@@ -65,6 +65,10 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVo-3j-l7e">
                                     <rect key="frame" x="24" y="59" width="327" height="100"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StarsforLeaderboard" translatesAutoresizingMaskIntoConstraints="NO" id="e8O-hd-iFg">
+                                            <rect key="frame" x="-32" y="-406" width="386" height="567"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m53-kT-vaG">
                                             <rect key="frame" x="8" y="40" width="112" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -73,7 +77,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbV-n5-Hps">
-                                            <rect key="frame" x="213" y="40" width="106" height="21.5"/>
+                                            <rect key="frame" x="213" y="39.5" width="106" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="106" id="E1o-a3-vUh"/>
                                             </constraints>
@@ -96,7 +100,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a93-Dr-dtc">
-                                            <rect key="frame" x="255" y="11" width="32" height="22"/>
+                                            <rect key="frame" x="255" y="11" width="32" height="21.5"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -135,7 +139,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4k-4u-atl">
-                                            <rect key="frame" x="101" y="19" width="191" height="21.5"/>
+                                            <rect key="frame" x="101" y="19.5" width="191" height="21.5"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                             <color key="textColor" red="0.21568627450980393" green="0.22745098039215686" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -156,7 +160,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoD-wO-Oww">
-                                            <rect key="frame" x="338" y="18.5" width="31" height="21.5"/>
+                                            <rect key="frame" x="338" y="19" width="31" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="31" id="8Lh-uE-bvX"/>
                                             </constraints>
@@ -212,6 +216,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="StarsforLeaderboard" width="375" height="667"/>
         <image name="earthIcon" width="256" height="256"/>
         <image name="noun_972990_cc" width="700" height="700"/>
         <image name="noun_978460_cc" width="700" height="700"/>

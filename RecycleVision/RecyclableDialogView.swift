@@ -13,6 +13,8 @@ class RecyclableDialogView: MessageView {
     
     var cancelAction: (() -> Void)?
     var MoreInfoAction: (() -> Void)?
+    
+    
     @IBAction func cancel() {
         cancelAction?()
     }

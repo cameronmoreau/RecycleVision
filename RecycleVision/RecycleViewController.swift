@@ -81,8 +81,18 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
                         
                         if let data = data as? [String:Any] {
                             let pass = data["isRecycleable"] as? Bool ?? false
-                            let title = pass ? "It's Recyclable!" : "Nope!"
-                            let body = pass ? "Great job!" : "You suck"
+                            let type = data["type"] as? String ?? ""
+                            
+                            var title: String!
+                            var body: String!
+                            
+                            if pass {
+                                title = "It's Recyclable!"
+                                body = "+5 points for you! \(type) can be recycled"
+                            } else {
+                                title = "Nope!"
+                                body = "This looks like \(type), which is not recycleable"
+                            }
                             
                             RecycleViewController.demoCustomNib(vc: self, title: title, body: body)
                         }

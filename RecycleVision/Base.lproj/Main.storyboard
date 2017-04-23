@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMQ-ar-2Ks">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMQ-ar-2Ks" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="0.0" y="559" width="375" height="108"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTF-kT-V5m" customClass="FBSDKLoginButton">
@@ -55,6 +55,13 @@
                                     <constraint firstAttribute="bottom" secondItem="DAI-s9-j7a" secondAttribute="bottom" constant="16" id="jsj-DE-5EW"/>
                                     <constraint firstItem="uTF-kT-V5m" firstAttribute="top" secondItem="jMQ-ar-2Ks" secondAttribute="topMargin" constant="16" id="ntL-YS-5nr"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideUp"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.25882352941176467" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>

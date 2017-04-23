@@ -9,8 +9,6 @@
 import UIKit
 import SwiftyCam
 import SwiftMessages
-import AudioToolbox
-import AVFoundation
 import Parse
 
 class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
@@ -52,26 +50,29 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
     }
     
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
+        self.captureButton.setLoading(loading: true)
+        
         let resizedPhoto = self.resizeImage(image: photo, targetSize: CGSize(width: 500, height: 500))
         let imageData = UIImagePNGRepresentation(resizedPhoto)
         let imageFile = PFFile(name: "\(Date().timeIntervalSince1970).png", data: imageData!)
         
-        print("TRYING TO SAVE")
-        let userPhoto = PFObject(className:"TestPhoto")
-        userPhoto["imageName"] = "My trip to Hawaii!"
+        // Save the file
+        let userPhoto = PFObject(className:"Upload")
+        userPhoto["user"] = PFUser.current()
         userPhoto["imageFile"] = imageFile
         userPhoto.saveInBackground { (saved, error) in
-            print("SAVING")
-            print(saved)
-            print(error)
-        }
-        
-        captureButton.setLoading(loading: true)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
             self.captureButton.setLoading(loading: false)
-            RecycleViewController.demoCustomNib()
-        })
+            
+            if error == nil {
+                if let file = userPhoto["imageFile"] as? PFFile {
+                    PFCloud.callFunction(inBackground: "Classify", withParameters: ["url": file.url], block: { (data, error) in
+                        print(data)
+                        print(error)
+                    })
+                }
+                RecycleViewController.demoCustomNib()
+            }
+        }
 
     }
     

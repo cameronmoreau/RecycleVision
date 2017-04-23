@@ -13,19 +13,20 @@ import Parse
 
 class LeaderboardTableViewController: UITableViewController, CLLocationManagerDelegate {
     
+    @IBAction func refreshPressed(_ sender: UIBarButtonItem) {
+        self.getData()
+    }
+    
     @IBOutlet var points: UILabel!
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var rank: UILabel!
+    
     let locationManager = CLLocationManager()
-    var userNames = [String]()
+    var users = [PFUser]()
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNames.append("Harry")
-        userNames.append("John")
-        userNames.append("Luke")
-        userNames.append("Larry")
-        
+
         points.text = "336"
         rank.text = "1"
         
@@ -40,6 +41,16 @@ class LeaderboardTableViewController: UITableViewController, CLLocationManagerDe
             locationManager.requestLocation();
         }
         
+        getData()
+    }
+    
+    func getData() {
+        let query = PFQuery(className: "_User")
+        query.order(byDescending: "score")
+        query.findObjectsInBackground { (objs, err) in
+            self.users = objs as! [PFUser]
+            self.tableView.reloadData()
+        }
     }
     
     func isAuthorizedtoGetUserLocation() {
@@ -90,14 +101,18 @@ class LeaderboardTableViewController: UITableViewController, CLLocationManagerDe
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return userNames.count
+        return users.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reuseIdentifier = "userCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! LeaderboardTableViewCell
-        cell.Username.text = userNames[indexPath.row]
+        
+        let u = self.users[indexPath.row]
+        
+        cell.Username.text = u["firstName"] as! String
+        cell.points.text = String(u["score"] as? Int ?? 0)
         cell.medal.image = cell.medal.image!.withRenderingMode(.alwaysTemplate)
         
         switch (indexPath.row){

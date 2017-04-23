@@ -65,10 +65,6 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVo-3j-l7e">
                                     <rect key="frame" x="24" y="59" width="327" height="100"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StarsforLeaderboard" translatesAutoresizingMaskIntoConstraints="NO" id="e8O-hd-iFg">
-                                            <rect key="frame" x="-32" y="-406" width="386" height="567"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m53-kT-vaG">
                                             <rect key="frame" x="8" y="40" width="112" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -216,7 +212,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="StarsforLeaderboard" width="375" height="667"/>
         <image name="earthIcon" width="256" height="256"/>
         <image name="noun_972990_cc" width="700" height="700"/>
         <image name="noun_978460_cc" width="700" height="700"/>

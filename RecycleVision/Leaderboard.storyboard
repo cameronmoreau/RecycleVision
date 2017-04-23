@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s2F-Nl-hmK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="s2F-Nl-hmK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,7 +25,7 @@
                     <tabBarItem key="tabBarItem" title="Leaderboard" image="leaderboard" id="EDH-EU-OTL"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZF1-zN-gVs">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZF1-zN-gVs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -73,7 +73,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbV-n5-Hps">
-                                            <rect key="frame" x="213" y="39.5" width="106" height="21.5"/>
+                                            <rect key="frame" x="213" y="40" width="106" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="106" id="E1o-a3-vUh"/>
                                             </constraints>
@@ -96,7 +96,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a93-Dr-dtc">
-                                            <rect key="frame" x="255" y="11" width="32" height="21.5"/>
+                                            <rect key="frame" x="255" y="11" width="32" height="22"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -115,14 +115,21 @@
                                         <constraint firstItem="WbV-n5-Hps" firstAttribute="centerY" secondItem="NVo-3j-l7e" secondAttribute="centerY" id="wMM-bT-pQk"/>
                                     </constraints>
                                 </view>
+                                <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPhone 7" translatesAutoresizingMaskIntoConstraints="NO" id="k0b-Um-f2P">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.18823529411764706" green="0.23529411764705882" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="NVo-3j-l7e" firstAttribute="centerY" secondItem="pV5-gT-Gdy" secondAttribute="centerY" constant="-1" id="35q-zl-wtG"/>
+                                <constraint firstAttribute="trailing" secondItem="k0b-Um-f2P" secondAttribute="trailing" id="8DI-85-67c"/>
                                 <constraint firstItem="NVo-3j-l7e" firstAttribute="top" secondItem="pV5-gT-Gdy" secondAttribute="top" constant="59" id="9wt-n5-Ych"/>
+                                <constraint firstAttribute="bottom" secondItem="k0b-Um-f2P" secondAttribute="bottom" id="MIk-uN-rYD"/>
                                 <constraint firstItem="wCt-9v-zyH" firstAttribute="centerX" secondItem="pV5-gT-Gdy" secondAttribute="centerX" id="QEz-v4-8V3"/>
                                 <constraint firstItem="NVo-3j-l7e" firstAttribute="leading" secondItem="pV5-gT-Gdy" secondAttribute="leading" constant="24" id="RY2-ID-pRa"/>
+                                <constraint firstItem="k0b-Um-f2P" firstAttribute="top" secondItem="pV5-gT-Gdy" secondAttribute="top" id="Rez-BU-0k3"/>
                                 <constraint firstItem="wCt-9v-zyH" firstAttribute="centerY" secondItem="pV5-gT-Gdy" secondAttribute="centerY" id="XmY-PN-dLg"/>
+                                <constraint firstItem="k0b-Um-f2P" firstAttribute="leading" secondItem="pV5-gT-Gdy" secondAttribute="leading" id="iLf-0o-zrd"/>
                                 <constraint firstAttribute="trailing" secondItem="NVo-3j-l7e" secondAttribute="trailing" constant="24" id="oUH-V2-fxb"/>
                             </constraints>
                         </view>
@@ -135,7 +142,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4k-4u-atl">
-                                            <rect key="frame" x="101" y="19.5" width="191" height="21.5"/>
+                                            <rect key="frame" x="101" y="20" width="191" height="21.5"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                             <color key="textColor" red="0.21568627450980393" green="0.22745098039215686" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -156,7 +163,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoD-wO-Oww">
-                                            <rect key="frame" x="338" y="19" width="31" height="21.5"/>
+                                            <rect key="frame" x="338" y="19.5" width="31" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="31" id="8Lh-uE-bvX"/>
                                             </constraints>
@@ -219,6 +226,7 @@
     </scenes>
     <resources>
         <image name="earthIcon" width="256" height="256"/>
+        <image name="iPhone 7" width="375" height="667"/>
         <image name="leaderboard" width="30" height="30"/>
         <image name="noun_972990_cc" width="700" height="700"/>
         <image name="noun_978460_cc" width="700" height="700"/>

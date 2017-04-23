@@ -68,7 +68,7 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        materialName.text = self.takenLabel
 //        switch(name){
 //        case material.0:
 //            materialIcon.image = materialImage.0

@@ -27,7 +27,7 @@ class LeaderboardTableViewController: UITableViewController, CLLocationManagerDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        points.text = "336"
+        points.text = String(PFUser.current()?["score"] as? Int ?? 0)
         rank.text = "1"
         
         //Pho location of user

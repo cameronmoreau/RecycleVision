@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mb4-NS-T8O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mb4-NS-T8O">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,11 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-Light.ttf">
+            <string>Muli-Light</string>
+        </array>
         <array key="Muli-Regular.ttf">
             <string>Muli-Regular</string>
-        </array>
-        <array key="Muli-SemiBold.ttf">
-            <string>Muli-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -69,62 +72,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7a-zc-dPW">
-                                <rect key="frame" x="22" y="124" width="330" height="418"/>
+                                <rect key="frame" x="24" y="96" width="327" height="277.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yo! This is recyclable. You can drop it off at the nearest location here." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULZ-MM-GmE">
-                                        <rect key="frame" x="8" y="181" width="314" height="169"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="169" id="Vde-oB-lay"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is recyclable. You can drop it off at the nearest location here." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULZ-MM-GmE">
+                                        <rect key="frame" x="16" y="165" width="295" height="43"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Plastic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVT-gI-MO5">
-                                        <rect key="frame" x="102" y="151" width="138" height="21.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="138" id="MR0-p9-Nlz"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plastic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVT-gI-MO5">
+                                        <rect key="frame" x="16" y="116" width="295" height="26.5"/>
+                                        <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="21"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: Recycle Can" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kM-ob-N9u">
-                                        <rect key="frame" x="8" y="357" width="314" height="53"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="53" id="OO6-Bq-Q7U"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: Recycle Can" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kM-ob-N9u">
+                                        <rect key="frame" x="16" y="240" width="295" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EarthinCircle" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-U1-aLI">
-                                        <rect key="frame" x="115" y="8" width="100" height="100"/>
+                                        <rect key="frame" x="113.5" y="16" width="100" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="mNq-5S-T0e"/>
-                                            <constraint firstAttribute="height" constant="100" id="rAm-68-3gZ"/>
+                                            <constraint firstAttribute="width" constant="100" id="p1d-Vn-EIS"/>
+                                            <constraint firstAttribute="height" constant="100" id="q1Q-nR-rPg"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1887655258" green="0.76000612970000003" blue="0.64645141360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="1kM-ob-N9u" firstAttribute="top" secondItem="ULZ-MM-GmE" secondAttribute="bottom" constant="7" id="3lm-bD-pUC"/>
-                                    <constraint firstItem="nAp-U1-aLI" firstAttribute="top" secondItem="b7a-zc-dPW" secondAttribute="topMargin" id="7LJ-Ba-Xnw"/>
-                                    <constraint firstItem="dVT-gI-MO5" firstAttribute="top" secondItem="nAp-U1-aLI" secondAttribute="bottom" constant="43" id="Rtb-JM-IlE"/>
-                                    <constraint firstItem="nAp-U1-aLI" firstAttribute="centerX" secondItem="b7a-zc-dPW" secondAttribute="centerX" id="TLO-ri-HTS"/>
-                                    <constraint firstItem="1kM-ob-N9u" firstAttribute="leading" secondItem="ULZ-MM-GmE" secondAttribute="leading" id="he8-Li-HrX"/>
-                                    <constraint firstItem="ULZ-MM-GmE" firstAttribute="centerX" secondItem="nAp-U1-aLI" secondAttribute="centerX" id="kTp-v0-2YF"/>
-                                    <constraint firstItem="1kM-ob-N9u" firstAttribute="trailing" secondItem="ULZ-MM-GmE" secondAttribute="trailing" id="mxj-5y-QVN"/>
-                                    <constraint firstItem="ULZ-MM-GmE" firstAttribute="top" secondItem="dVT-gI-MO5" secondAttribute="bottom" constant="8" symbolic="YES" id="o91-du-8mX"/>
-                                    <constraint firstItem="1kM-ob-N9u" firstAttribute="bottom" secondItem="b7a-zc-dPW" secondAttribute="bottomMargin" id="pps-a8-lHO"/>
-                                    <constraint firstItem="ULZ-MM-GmE" firstAttribute="leading" secondItem="b7a-zc-dPW" secondAttribute="leadingMargin" id="zBb-wa-5b8"/>
+                                    <constraint firstAttribute="trailing" secondItem="ULZ-MM-GmE" secondAttribute="trailing" constant="16" id="2ES-ro-ecW"/>
+                                    <constraint firstAttribute="bottom" secondItem="1kM-ob-N9u" secondAttribute="bottom" constant="16" id="6bh-OE-IfO"/>
+                                    <constraint firstAttribute="trailing" secondItem="1kM-ob-N9u" secondAttribute="trailing" constant="16" id="IUO-kJ-JkS"/>
+                                    <constraint firstItem="nAp-U1-aLI" firstAttribute="centerX" secondItem="b7a-zc-dPW" secondAttribute="centerX" id="OZx-0e-mMm"/>
+                                    <constraint firstItem="nAp-U1-aLI" firstAttribute="top" secondItem="b7a-zc-dPW" secondAttribute="top" constant="16" id="PMi-8i-VYs"/>
+                                    <constraint firstItem="ULZ-MM-GmE" firstAttribute="leading" secondItem="b7a-zc-dPW" secondAttribute="leading" constant="16" id="Q7u-Fh-XC5"/>
+                                    <constraint firstItem="dVT-gI-MO5" firstAttribute="leading" secondItem="b7a-zc-dPW" secondAttribute="leading" constant="16" id="R6M-Qu-dWa"/>
+                                    <constraint firstAttribute="trailing" secondItem="dVT-gI-MO5" secondAttribute="trailing" constant="16" id="axb-O3-ODR"/>
+                                    <constraint firstItem="1kM-ob-N9u" firstAttribute="leading" secondItem="b7a-zc-dPW" secondAttribute="leading" constant="16" id="grM-Iv-Ksb"/>
+                                    <constraint firstItem="dVT-gI-MO5" firstAttribute="top" secondItem="nAp-U1-aLI" secondAttribute="bottom" id="jzz-3G-qrH"/>
+                                    <constraint firstItem="1kM-ob-N9u" firstAttribute="top" secondItem="ULZ-MM-GmE" secondAttribute="bottom" constant="32" id="nJ8-bK-Qah"/>
+                                    <constraint firstItem="ULZ-MM-GmE" firstAttribute="top" secondItem="dVT-gI-MO5" secondAttribute="bottom" constant="22" id="yTQ-II-3UY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbf-7o-Uba">
-                                <rect key="frame" x="137" y="580" width="100" height="30"/>
+                                <rect key="frame" x="128" y="389.5" width="118" height="34"/>
+                                <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="17"/>
                                 <state key="normal" title="Find Locations">
                                     <color key="titleColor" red="0.1887655258" green="0.76000612970000003" blue="0.64645141360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -135,12 +132,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1137254902" green="0.25882352939999997" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="b7a-zc-dPW" firstAttribute="top" secondItem="xOw-l6-IBP" secondAttribute="bottom" constant="60" id="2h9-DS-4Ha"/>
-                            <constraint firstItem="tIg-6I-kic" firstAttribute="top" secondItem="Xbf-7o-Uba" secondAttribute="bottom" constant="57" id="36G-Ez-OCa"/>
-                            <constraint firstItem="b7a-zc-dPW" firstAttribute="centerY" secondItem="cBJ-dS-uvp" secondAttribute="centerY" id="TE7-ue-UlP"/>
-                            <constraint firstItem="b7a-zc-dPW" firstAttribute="leading" secondItem="cBJ-dS-uvp" secondAttribute="leadingMargin" constant="6" id="UiT-57-vyn"/>
-                            <constraint firstItem="b7a-zc-dPW" firstAttribute="centerX" secondItem="cBJ-dS-uvp" secondAttribute="centerX" id="suO-Fb-Qqy"/>
-                            <constraint firstItem="Xbf-7o-Uba" firstAttribute="centerX" secondItem="cBJ-dS-uvp" secondAttribute="centerX" id="tfG-m0-uoL"/>
+                            <constraint firstItem="Xbf-7o-Uba" firstAttribute="top" secondItem="b7a-zc-dPW" secondAttribute="bottom" constant="16" id="83r-h2-Sxr"/>
+                            <constraint firstItem="b7a-zc-dPW" firstAttribute="leading" secondItem="cBJ-dS-uvp" secondAttribute="leadingMargin" constant="8" id="VsK-cw-Bj5"/>
+                            <constraint firstItem="Xbf-7o-Uba" firstAttribute="centerX" secondItem="cBJ-dS-uvp" secondAttribute="centerX" id="dJO-vO-9GT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b7a-zc-dPW" secondAttribute="trailing" constant="8" id="tU8-nw-asB"/>
+                            <constraint firstItem="b7a-zc-dPW" firstAttribute="top" secondItem="xOw-l6-IBP" secondAttribute="bottom" constant="32" id="xk8-GE-GTM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="boF-Wt-iCT">

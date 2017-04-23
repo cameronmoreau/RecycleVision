@@ -16,14 +16,14 @@ class RecyclableDialogView: MessageView {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var cancelAction: (() -> Void)?
-    var MoreInfoAction: (() -> Void)?
+    var moreInfoAction: (() -> Void)?
     
     @IBAction func cancel() {
         cancelAction?()
     }
     
     @IBAction func moreInfo() {
-        MoreInfoAction?()
+        moreInfoAction?()
     }
 
 }

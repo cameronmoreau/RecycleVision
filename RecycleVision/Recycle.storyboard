@@ -33,7 +33,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Recycle Vision" id="phZ-FQ-raE"/>
                     <connections>
-                        <segue destination="cOm-I1-ApT" kind="presentation" id="Xy5-rc-WGp"/>
+                        <segue destination="cOm-I1-ApT" kind="presentation" identifier="MoreInfoSegue" id="Xy5-rc-WGp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGO-Yg-ueq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -44,7 +44,7 @@
         <scene sceneID="qiz-sD-dbn">
             <objects>
                 <navigationController id="cOm-I1-ApT" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ev1-YA-GUj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ev1-YA-GUj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -154,7 +154,7 @@
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fUI-6d-wWG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fUI-6d-wWG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

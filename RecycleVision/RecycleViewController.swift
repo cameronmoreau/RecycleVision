@@ -14,7 +14,6 @@ import Parse
 class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
    
     var captureButton: SwiftyRecordButton!
-    var goOn = 0
     
     static func demoCustomNib(vc: RecycleViewController, title: String, body: String) {
         
@@ -34,6 +33,12 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
         config.dimMode = .gray(interactive: true)
         SwiftMessages.show(config: config, view: view)
     }
+    
+    @IBAction func unwindToRecycle(segue:UIStoryboardSegue) {
+        
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

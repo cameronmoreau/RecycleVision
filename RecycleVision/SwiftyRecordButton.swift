@@ -15,20 +15,48 @@
 
 import UIKit
 import SwiftyCam
+import NVActivityIndicatorView
 
 class SwiftyRecordButton: SwiftyCamButton {
     
     private var circleBorder: CALayer!
     private var innerCircle: UIView!
+    private var loadingIndicator: NVActivityIndicatorView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         drawButton()
+        initLoadingIndicator()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         drawButton()
+        initLoadingIndicator()
+    }
+    
+    private func initLoadingIndicator() {
+        loadingIndicator = NVActivityIndicatorView(
+            frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height),
+            type: .ballTrianglePath,
+            color: UIColor.white,
+            padding: 0
+        )
+        loadingIndicator.isHidden = true
+        
+        self.addSubview(loadingIndicator)
+    }
+    
+    public func setLoading(loading: Bool) {
+        if loading {
+            loadingIndicator.isHidden = false
+            loadingIndicator.startAnimating()
+            circleBorder.isHidden = true
+        } else {
+            loadingIndicator.isHidden = true
+            loadingIndicator.stopAnimating()
+            circleBorder.isHidden = false
+        }
     }
     
     private func drawButton() {
@@ -37,7 +65,7 @@ class SwiftyRecordButton: SwiftyCamButton {
         circleBorder = CALayer()
         circleBorder.backgroundColor = UIColor.clear.cgColor
         circleBorder.borderWidth = 6.0
-        circleBorder.borderColor = UIColor(red: CGFloat(0.32), green: CGFloat(0.94), blue: CGFloat(0.29), alpha: CGFloat(1.0)).cgColor
+        circleBorder.borderColor = UIColor(red: CGFloat(1.0), green: CGFloat(1.0), blue: CGFloat(1.0), alpha: CGFloat(1.0)).cgColor
         circleBorder.bounds = self.bounds
         circleBorder.position = CGPoint(x: self.bounds.midX, y: self.bounds.midY)
         circleBorder.cornerRadius = self.frame.size.width / 2

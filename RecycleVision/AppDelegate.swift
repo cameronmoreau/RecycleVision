@@ -28,6 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         
+        // UI Stuff
+        let navbarAppearace = UINavigationBar.appearance()
+        navbarAppearace.titleTextAttributes = [
+            NSFontAttributeName: UIFont.titleBar
+        ]
+        
         return true
     }
     

@@ -9,6 +9,7 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.22.0):
     - FBSDKCoreKit
+  - NVActivityIndicatorView (3.6.1)
   - Parse (1.14.4):
     - Bolts/Tasks (~> 1.8)
   - ParseFacebookUtilsV4 (1.11.1):
@@ -35,6 +36,7 @@ PODS:
 DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
+  - NVActivityIndicatorView (~> 3.6.1)
   - Parse (~> 1.14.4)
   - ParseFacebookUtilsV4 (~> 1.11.1)
   - PromiseKit (~> 4.1.7)
@@ -56,6 +58,7 @@ SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FBSDKCoreKit: c693bad19feb225469eeff14452ba364522ee48b
   FBSDKLoginKit: 1fa529fc622d7b32ebeaffbecd377180833c6d30
+  NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
   Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
   ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
@@ -63,6 +66,6 @@ SPEC CHECKSUMS:
   SwiftMessages: 09cea3336e3fb63c3578983c8aac65acaa6d884a
   SwiftyCam: 966b67eeab2dfcfd0077eaa3c5a6bd69e1748af0
 
-PODFILE CHECKSUM: 6982daf351460e03300a031707fd4659f1091386
+PODFILE CHECKSUM: db3d62a5be584065b090e08a4b3c22cd929a98c9
 
 COCOAPODS: 1.2.1

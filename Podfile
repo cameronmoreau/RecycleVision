@@ -11,4 +11,5 @@ target 'RecycleVision' do
   pod 'SwiftyCam', '~> 2.2.1'
   pod 'SwiftMessages', '~> 3.3.3'
   pod 'PromiseKit', '~> 4.1.7'
+  pod 'NVActivityIndicatorView', '~> 3.6.1'
 end

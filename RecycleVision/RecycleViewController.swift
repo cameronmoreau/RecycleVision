@@ -11,6 +11,8 @@ import SwiftyCam
 import SwiftMessages
 import AudioToolbox
 import AVFoundation
+import Parse
+
 class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
    
     var captureButton: SwiftyRecordButton!
@@ -31,6 +33,16 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Transparent navbar
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        
+        navigationController?.navigationBar.barStyle = .black
+        
+        // Setup camera
         cameraDelegate = self
         
         captureButton = SwiftyRecordButton(frame: CGRect(x: view.frame.midX - 37.5, y: view.frame.height - 150.0, width: 75.0, height: 75.0))
@@ -40,22 +52,54 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
     }
     
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
-       
-        captureButton.growButton()
+        let resizedPhoto = self.resizeImage(image: photo, targetSize: CGSize(width: 500, height: 500))
+        let imageData = UIImagePNGRepresentation(resizedPhoto)
+        let imageFile = PFFile(name: "\(Date().timeIntervalSince1970).png", data: imageData!)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25, execute: {
-            self.captureButton.shrinkButton()
-        })
+        print("TRYING TO SAVE")
+        let userPhoto = PFObject(className:"TestPhoto")
+        userPhoto["imageName"] = "My trip to Hawaii!"
+        userPhoto["imageFile"] = imageFile
+        userPhoto.saveInBackground { (saved, error) in
+            print("SAVING")
+            print(saved)
+            print(error)
+        }
         
-        // Temp delay of uno mo secondo
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+        captureButton.setLoading(loading: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            self.captureButton.setLoading(loading: false)
             RecycleViewController.demoCustomNib()
         })
-        
-        
-        print("IT TOOK THE PICTURE")
+
     }
     
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+        
+        let widthRatio  = targetSize.width  / image.size.width
+        let heightRatio = targetSize.height / image.size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
     
     
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFocusAtPoint point: CGPoint) {

@@ -19,21 +19,6 @@ enum LoginError: Error {
 
 class OnboardingViewController: UIViewController, FBSDKLoginButtonDelegate {
     
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        PFFacebookUtils.logInInBackground(withReadPermissions: ["email", "public_profile"]) { (user, error) in
-            
-            if let error = error {
-                print("There was an error")
-                print(error)
-            }
-            
-            if let user = user {
-                print("WE got the user")
-                print(user)
-            }
-        }
-    }
-    
     @IBOutlet weak var facebookLoginButton: FBSDKLoginButton!
     
     override func viewDidLoad() {

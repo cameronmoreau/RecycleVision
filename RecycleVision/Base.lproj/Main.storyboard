@@ -22,40 +22,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTF-kT-V5m" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="16" y="579" width="343" height="30"/>
-                                <color key="backgroundColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMQ-ar-2Ks">
+                                <rect key="frame" x="0.0" y="559" width="375" height="108"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTF-kT-V5m" customClass="FBSDKLoginButton">
+                                        <rect key="frame" x="16" y="24" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.65490196079999996" green="0.65490196079999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Mqy-PF-yVD"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAI-s9-j7a">
+                                        <rect key="frame" x="16" y="62" width="343" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="cqu-oS-lel"/>
+                                        </constraints>
+                                        <state key="normal" title="I don't want to login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="qBG-Z6-cvZ" kind="showDetail" id="zm1-jp-TAi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.10429152397260275" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Mqy-PF-yVD"/>
+                                    <constraint firstItem="DAI-s9-j7a" firstAttribute="top" secondItem="uTF-kT-V5m" secondAttribute="bottom" constant="8" id="CSL-9F-Z3g"/>
+                                    <constraint firstItem="uTF-kT-V5m" firstAttribute="leading" secondItem="jMQ-ar-2Ks" secondAttribute="leading" constant="16" id="WUf-la-5yl"/>
+                                    <constraint firstItem="DAI-s9-j7a" firstAttribute="leading" secondItem="jMQ-ar-2Ks" secondAttribute="leading" constant="16" id="XF8-RH-xm2"/>
+                                    <constraint firstAttribute="trailing" secondItem="uTF-kT-V5m" secondAttribute="trailing" constant="16" id="ZWb-ql-b3X"/>
+                                    <constraint firstAttribute="trailing" secondItem="DAI-s9-j7a" secondAttribute="trailing" constant="16" id="iqv-5M-JC3"/>
+                                    <constraint firstAttribute="bottom" secondItem="DAI-s9-j7a" secondAttribute="bottom" constant="16" id="jsj-DE-5EW"/>
+                                    <constraint firstItem="uTF-kT-V5m" firstAttribute="top" secondItem="jMQ-ar-2Ks" secondAttribute="topMargin" constant="16" id="ntL-YS-5nr"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAI-s9-j7a">
-                                <rect key="frame" x="16" y="617" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="iaU-pE-Sd5"/>
-                                </constraints>
-                                <state key="normal" title="Skip"/>
-                                <connections>
-                                    <segue destination="qBG-Z6-cvZ" kind="showDetail" id="zm1-jp-TAi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BR-Ik-53H">
-                                <rect key="frame" x="149" y="357" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="RL3-3L-rHh" eventType="touchUpInside" id="WdL-pQ-pJD"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.25882352941176467" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="uTF-kT-V5m" firstAttribute="leading" secondItem="aVH-G2-VNr" secondAttribute="leadingMargin" id="0K0-Mi-FA3"/>
-                            <constraint firstItem="uTF-kT-V5m" firstAttribute="trailing" secondItem="aVH-G2-VNr" secondAttribute="trailingMargin" id="6TM-Dt-GCL"/>
-                            <constraint firstItem="QH2-FS-3Ni" firstAttribute="top" secondItem="DAI-s9-j7a" secondAttribute="bottom" constant="20" id="Q8r-3l-Skd"/>
-                            <constraint firstItem="DAI-s9-j7a" firstAttribute="top" secondItem="uTF-kT-V5m" secondAttribute="bottom" constant="8" id="h5G-A5-82w"/>
-                            <constraint firstItem="DAI-s9-j7a" firstAttribute="leading" secondItem="aVH-G2-VNr" secondAttribute="leadingMargin" id="kIU-eq-OZf"/>
-                            <constraint firstItem="DAI-s9-j7a" firstAttribute="trailing" secondItem="aVH-G2-VNr" secondAttribute="trailingMargin" id="muL-wb-5Cs"/>
+                            <constraint firstItem="QH2-FS-3Ni" firstAttribute="top" secondItem="jMQ-ar-2Ks" secondAttribute="bottom" id="cSh-Kd-mEt"/>
+                            <constraint firstAttribute="trailing" secondItem="jMQ-ar-2Ks" secondAttribute="trailing" id="d7k-15-24N"/>
+                            <constraint firstItem="jMQ-ar-2Ks" firstAttribute="leading" secondItem="aVH-G2-VNr" secondAttribute="leading" id="iad-vm-Rct"/>
                         </constraints>
                     </view>
                     <connections>
@@ -65,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4L-ib-T9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="110"/>
+            <point key="canvasLocation" x="100" y="109.29535232383809"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YhJ-SC-zUC">

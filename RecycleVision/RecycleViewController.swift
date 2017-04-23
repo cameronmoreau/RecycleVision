@@ -14,20 +14,8 @@ import AVFoundation
 class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
    
     var captureButton: SwiftyRecordButton!
+    var goOn = 0
     
-    static func demoCustomNib() {
-        
-        let view: RecyclableDialogView = try! SwiftMessages.viewFromNib()
-        view.configureDropShadow()
-        view.cancelAction = { _ in SwiftMessages.hide() }
-        view.MoreInfoAction = { SwiftMessages.hide() }
-        var config = SwiftMessages.defaultConfig
-        config.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
-        config.duration = .forever
-        config.presentationStyle = .bottom
-        config.dimMode = .gray(interactive: true)
-        SwiftMessages.show(config: config, view: view)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +24,23 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
         captureButton = SwiftyRecordButton(frame: CGRect(x: view.frame.midX - 37.5, y: view.frame.height - 150.0, width: 75.0, height: 75.0))
         captureButton.delegate = self
         self.view.addSubview(captureButton)
-        
+       
     }
     
+    static func demoCustomNib() {
+        
+        let view: RecyclableDialogView = try! SwiftMessages.viewFromNib()
+        view.configureDropShadow()
+        view.cancelAction = { _ in SwiftMessages.hide() }
+        view.MoreInfoAction = {  _ in SwiftMessages.hide() /* I NEED HELP ON HOOKING THE MESSAGES UP TO THE CARD ViewController */ }
+        var config = SwiftMessages.defaultConfig
+        config.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
+        config.duration = .forever
+        config.presentationStyle = .bottom
+        config.dimMode = .gray(interactive: true)
+        SwiftMessages.show(config: config, view: view)
+    }
+
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
        
         captureButton.growButton()

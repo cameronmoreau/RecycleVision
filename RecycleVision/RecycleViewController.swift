@@ -62,15 +62,6 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
         self.captureButton.setLoading(loading: true)
         
-//        PFCloud.callFunction(inBackground: "Classify", withParameters: ["id": "t5ByGCx1NY"], block: { (data, error) in
-//            
-//            self.captureButton.setLoading(loading: false)
-//            
-//            print(data)
-//        })
-//        
-//        return
-        
         let resizedPhoto = self.resizeImage(image: photo, targetSize: CGSize(width: 500, height: 500))
         let imageData = UIImagePNGRepresentation(resizedPhoto)
         let imageFile = PFFile(name: "\(Date().timeIntervalSince1970).png", data: imageData!)

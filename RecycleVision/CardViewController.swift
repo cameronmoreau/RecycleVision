@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import MapKit
 
 class CardViewController: UIViewController {
     
+    
+    @IBAction func sharePressed(_ sender: UIBarButtonItem) {
+        
+        let q = "Recycle%20Dropoff"
+        let url = URL(string: "http://maps.apple.com/?q=\(q)")!
+        
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
     
 
     @IBOutlet var materialIcon: UIImageView!

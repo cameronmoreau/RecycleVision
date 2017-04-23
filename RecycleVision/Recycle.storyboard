@@ -71,7 +71,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7a-zc-dPW">
                                 <rect key="frame" x="22" y="124" width="330" height="418"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yo! Plastic is recyclable. You can drop it off at the nearest location here." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULZ-MM-GmE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yo! This is recyclable. You can drop it off at the nearest location here." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULZ-MM-GmE">
                                         <rect key="frame" x="8" y="180.5" width="314" height="169"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="169" id="Vde-oB-lay"/>
@@ -89,7 +89,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kM-ob-N9u">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location: Recycle Can" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kM-ob-N9u">
                                         <rect key="frame" x="8" y="357" width="314" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="PEx-fP-Dwg"/>
@@ -121,6 +121,10 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q1z-Hx-yzF">
+                                <rect key="frame" x="67" y="550" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1137254902" green="0.25882352939999997" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -139,6 +143,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="drb-WE-c4o">
                             <color key="tintColor" red="0.1137254902" green="0.25882352939999997" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="sharePressed:" destination="7M8-FH-xy9" id="Vql-dI-kDY"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

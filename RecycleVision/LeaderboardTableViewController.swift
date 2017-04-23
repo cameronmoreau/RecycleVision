@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import CoreLocation
+import MapKit
+import Parse
 
-class LeaderboardTableViewController: UITableViewController {
+class LeaderboardTableViewController: UITableViewController, CLLocationManagerDelegate {
     
     @IBOutlet var points: UILabel!
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var rank: UILabel!
-    
+    let locationManager = CLLocationManager()
     var userNames = [String]()
    
     override func viewDidLoad() {
@@ -26,8 +29,52 @@ class LeaderboardTableViewController: UITableViewController {
         points.text = "336"
         rank.text = "1"
         
+        //Pho location of user
+        
+        self.locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        }
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestLocation();
+        }
         
     }
+    
+    func isAuthorizedtoGetUserLocation() {
+        
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse     {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            print("User allowed us to access location")
+            
+        }
+    }
+    
+    
+   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.locationManager.stopUpdatingLocation()
+        print("Did location updates is called")
+        //store the user location here to firebase or somewhere
+        let locValue:CLLocation = manager.location!
+        let loc = PFGeoPoint(location: locValue)
+        let u = PFUser.current()
+        u?["location"] = loc
+        u?.saveInBackground()
+    
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Did location updates is called but failed getting location \(error)")
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

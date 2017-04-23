@@ -116,7 +116,7 @@
                                     </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" red="0.1901690066" green="0.23690178989999999" blue="0.34892976279999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.18823529411764706" green="0.23529411764705882" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="NVo-3j-l7e" firstAttribute="centerY" secondItem="pV5-gT-Gdy" secondAttribute="centerY" constant="-1" id="35q-zl-wtG"/>
                                 <constraint firstItem="NVo-3j-l7e" firstAttribute="top" secondItem="pV5-gT-Gdy" secondAttribute="top" constant="59" id="9wt-n5-Ych"/>
@@ -131,17 +131,17 @@
                                 <rect key="frame" x="0.0" y="248" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bak-Fm-fOd" id="A2n-yf-gkO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4k-4u-atl">
-                                            <rect key="frame" x="101" y="19" width="191" height="21"/>
+                                            <rect key="frame" x="101" y="19.5" width="191" height="21.5"/>
                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                             <color key="textColor" red="0.21568627450980393" green="0.22745098039215686" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb3-HK-KYZ">
-                                            <rect key="frame" x="10" y="14" width="30" height="32"/>
+                                            <rect key="frame" x="10" y="14.5" width="30" height="31.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="30" id="dzK-NI-7wX"/>
                                             </constraints>
@@ -156,7 +156,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoD-wO-Oww">
-                                            <rect key="frame" x="338" y="18" width="31" height="22"/>
+                                            <rect key="frame" x="338" y="19" width="31" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="31" id="8Lh-uE-bvX"/>
                                             </constraints>

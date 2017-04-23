@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RL3-3L-rHh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RL3-3L-rHh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Onboarding View Controller-->
         <scene sceneID="d35-yQ-r9t">
@@ -22,6 +27,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="iPhone 7" translatesAutoresizingMaskIntoConstraints="NO" id="4dx-W8-n8t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMQ-ar-2Ks" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="0.0" y="559" width="375" height="108"/>
                                 <subviews>
@@ -31,6 +39,11 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Mqy-PF-yVD"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAI-s9-j7a">
                                         <rect key="frame" x="16" y="62" width="343" height="30"/>
@@ -63,12 +76,47 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recycle Vision" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2n-Ds-JxC">
+                                <rect key="frame" x="16" y="176" width="343" height="32"/>
+                                <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="25"/>
+                                <color key="textColor" red="0.18876552581787109" green="0.7600061297416687" blue="0.64645141363143921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earthIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Oib-73-5wn" customClass="SpringImageView" customModule="Spring">
+                                <rect key="frame" x="144" y="236" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="28h-Jd-eJj"/>
+                                    <constraint firstAttribute="width" constant="88" id="prf-zv-wDa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeLeft"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="repeatCount">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.25882352941176467" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Oib-73-5wn" firstAttribute="centerX" secondItem="aVH-G2-VNr" secondAttribute="centerX" id="1rE-Bz-m2H"/>
+                            <constraint firstItem="Oib-73-5wn" firstAttribute="top" secondItem="aVH-G2-VNr" secondAttribute="top" constant="236" id="8Od-M6-Vrj"/>
+                            <constraint firstItem="Oib-73-5wn" firstAttribute="top" secondItem="h2n-Ds-JxC" secondAttribute="bottom" constant="28" id="9T2-eE-ovj"/>
+                            <constraint firstItem="jMQ-ar-2Ks" firstAttribute="leading" secondItem="aVH-G2-VNr" secondAttribute="leading" id="AYY-C0-uL9"/>
+                            <constraint firstAttribute="trailing" secondItem="jMQ-ar-2Ks" secondAttribute="trailing" id="JnK-J7-4Yq"/>
+                            <constraint firstItem="QH2-FS-3Ni" firstAttribute="top" secondItem="4dx-W8-n8t" secondAttribute="bottom" id="PNU-mN-0vd"/>
+                            <constraint firstItem="QH2-FS-3Ni" firstAttribute="top" secondItem="jMQ-ar-2Ks" secondAttribute="bottom" id="ROU-hl-95O"/>
+                            <constraint firstAttribute="trailing" secondItem="4dx-W8-n8t" secondAttribute="trailing" id="SZz-5M-JFS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h2n-Ds-JxC" secondAttribute="trailing" id="U6Z-0S-edM"/>
                             <constraint firstItem="QH2-FS-3Ni" firstAttribute="top" secondItem="jMQ-ar-2Ks" secondAttribute="bottom" id="cSh-Kd-mEt"/>
                             <constraint firstAttribute="trailing" secondItem="jMQ-ar-2Ks" secondAttribute="trailing" id="d7k-15-24N"/>
                             <constraint firstItem="jMQ-ar-2Ks" firstAttribute="leading" secondItem="aVH-G2-VNr" secondAttribute="leading" id="iad-vm-Rct"/>
+                            <constraint firstItem="4dx-W8-n8t" firstAttribute="top" secondItem="aVH-G2-VNr" secondAttribute="top" id="kHN-n5-Qb8"/>
+                            <constraint firstItem="4dx-W8-n8t" firstAttribute="leading" secondItem="aVH-G2-VNr" secondAttribute="leading" id="q3I-cG-6UV"/>
+                            <constraint firstItem="h2n-Ds-JxC" firstAttribute="leading" secondItem="aVH-G2-VNr" secondAttribute="leadingMargin" id="xep-g2-x1s"/>
                         </constraints>
                     </view>
                     <connections>
@@ -130,6 +178,10 @@
             <point key="canvasLocation" x="1634" y="176"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="earthIcon" width="256" height="256"/>
+        <image name="iPhone 7" width="375" height="667"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ojJ-aW-FcW"/>
     </inferredMetricsTieBreakers>

@@ -8,8 +8,20 @@
 
 import UIKit
 import Parse
+import FBSDKLoginKit
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    
+    
+    @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
+        
+        PFUser.logOutInBackground()
+        FBSDKLoginManager().logOut()
+        
+        self.performSegue(withIdentifier: "logoutSegue", sender: nil)
+    }
+    
+    
     @IBOutlet weak var points: UILabel!
     @IBOutlet weak var ImageView: UIImageView!
     @IBOutlet weak var rank: UILabel!
@@ -29,6 +41,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
        
     }
+    
     
 //    @IBAction func saveButton(_ sender: Any) {
 //        //lets the user the cha

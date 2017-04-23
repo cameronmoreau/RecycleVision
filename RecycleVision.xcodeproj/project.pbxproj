@@ -17,6 +17,8 @@
 		7E1BAE5B1EABB60D000D9007 /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1BAE5A1EABB60D000D9007 /* Leaderboard.storyboard */; };
 		7E1BAE5D1EABD2C5000D9007 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */; };
 		860F37611EAC11B800936A50 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F37601EAC11B800936A50 /* CardViewController.swift */; };
+		860F37631EAC1CA500936A50 /* RecyclableDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 860F37621EAC1CA500936A50 /* RecyclableDialogView.xib */; };
+		860F37651EAC20E900936A50 /* RecyclableDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860F37641EAC20E900936A50 /* RecyclableDialogView.swift */; };
 		865AC0B51EABECC800DAA980 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865AC0B41EABECC800DAA980 /* LeaderboardTableViewCell.swift */; };
 		868B4DD01EABD05F00F34CC4 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868B4DCF1EABD05F00F34CC4 /* LeaderboardTableViewController.swift */; };
 		868B4DDE1EABEA9D00F34CC4 /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 868B4DDD1EABEA9D00F34CC4 /* Muli-Regular.ttf */; };
@@ -42,6 +44,8 @@
 		7E1BAE5A1EABB60D000D9007 /* Leaderboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Leaderboard.storyboard; sourceTree = "<group>"; };
 		7E1BAE5C1EABD2C5000D9007 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		860F37601EAC11B800936A50 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		860F37621EAC1CA500936A50 /* RecyclableDialogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecyclableDialogView.xib; sourceTree = "<group>"; };
+		860F37641EAC20E900936A50 /* RecyclableDialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecyclableDialogView.swift; sourceTree = "<group>"; };
 		865AC0B41EABECC800DAA980 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		868B4DCF1EABD05F00F34CC4 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
 		868B4DDD1EABEA9D00F34CC4 /* Muli-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Regular.ttf"; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 				A3EA79DF1EABE70800B5C405 /* RecycleViewController.swift */,
 				A3DD6E7F1EABF3A4008DE9AB /* SwiftyRecordButton.swift */,
 				860F37601EAC11B800936A50 /* CardViewController.swift */,
+				860F37621EAC1CA500936A50 /* RecyclableDialogView.xib */,
+				860F37641EAC20E900936A50 /* RecyclableDialogView.swift */,
 			);
 			name = Recycle;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 				868B4DE41EABEADA00F34CC4 /* Muli-Bold.ttf in Resources */,
 				7E1BAE541EABB5CC000D9007 /* Profile.storyboard in Resources */,
 				7E1BAE581EABB5EB000D9007 /* Recycle.storyboard in Resources */,
+				860F37631EAC1CA500936A50 /* RecyclableDialogView.xib in Resources */,
 				7E1BAE401EABACFF000D9007 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3EA79E01EABE70800B5C405 /* RecycleViewController.swift in Sources */,
+				860F37651EAC20E900936A50 /* RecyclableDialogView.swift in Sources */,
 				A3DD6E801EABF3A4008DE9AB /* SwiftyRecordButton.swift in Sources */,
 				7E1BAE3D1EABACFF000D9007 /* ViewController.swift in Sources */,
 				7E1BAE5D1EABD2C5000D9007 /* OnboardingViewController.swift in Sources */,

@@ -131,11 +131,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="boF-Wt-iCT">
-                        <barButtonItem key="leftBarButtonItem" title="Thanks!" id="2Lc-js-trc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2Lc-js-trc">
                             <color key="tintColor" red="0.11474486440420151" green="0.2570977509021759" blue="0.35693573951721191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="lzU-kL-fcy" kind="unwind" unwindAction="unwindToRecycleWithSegue:" id="Yia-CR-Xbu"/>
                             </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="drb-WE-c4o">
+                            <color key="tintColor" red="0.1137254902" green="0.25882352939999997" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

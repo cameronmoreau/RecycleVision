@@ -10,4 +10,5 @@ target 'RecycleVision' do
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
   pod 'SwiftyCam', '~> 2.2.1'
   pod 'SwiftMessages', '~> 3.3.3'
+  pod 'PromiseKit', '~> 4.1.7'
 end

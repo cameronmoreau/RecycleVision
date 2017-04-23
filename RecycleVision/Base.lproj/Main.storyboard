@@ -60,6 +60,7 @@
                     </view>
                     <connections>
                         <outlet property="facebookLoginButton" destination="uTF-kT-V5m" id="rxt-yG-dxh"/>
+                        <segue destination="qBG-Z6-cvZ" kind="showDetail" identifier="LoginSegue" id="ojJ-aW-FcW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4L-ib-T9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -116,4 +117,7 @@
             <point key="canvasLocation" x="1634" y="176"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ojJ-aW-FcW"/>
+    </inferredMetricsTieBreakers>
 </document>

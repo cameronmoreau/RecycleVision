@@ -51,6 +51,10 @@ class LeaderboardTableViewController: UITableViewController, CLLocationManagerDe
             self.users = objs as! [PFUser]
             self.tableView.reloadData()
         }
+        
+        PFUser.current()?.fetchInBackground(block: { (user, error) in
+            self.points.text = String(PFUser.current()?["score"] as? Int ?? 0)
+        })
     }
     
     func isAuthorizedtoGetUserLocation() {

@@ -6,8 +6,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Regular.ttf">
+            <string>Muli-Regular</string>
+        </array>
+        <array key="Muli-SemiBold.ttf">
+            <string>Muli-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Recycle Vision-->
         <scene sceneID="cbd-f5-t8X">
@@ -24,37 +33,118 @@
                     </view>
                     <navigationItem key="navigationItem" title="Recycle Vision" id="phZ-FQ-raE"/>
                     <connections>
-                        <segue destination="54d-b5-h3N" kind="presentation" id="Xcg-cG-dOM"/>
+                        <segue destination="cOm-I1-ApT" kind="presentation" id="Xy5-rc-WGp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGO-Yg-ueq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1128.8" y="-468.21589205397305"/>
         </scene>
-        <!--Card View Controller-->
-        <scene sceneID="W8w-oy-tRu">
+        <!--Navigation Controller-->
+        <scene sceneID="qiz-sD-dbn">
             <objects>
-                <viewController restorationIdentifier="CardViewController" storyboardIdentifier="CardViewController" id="54d-b5-h3N" customClass="CardViewController" customModule="RecycleVision" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="cOm-I1-ApT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ev1-YA-GUj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7M8-FH-xy9" kind="relationship" relationship="rootViewController" id="kTU-1e-0Ry"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mxm-TJ-elC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2082" y="-468"/>
+        </scene>
+        <!--Card View Controller-->
+        <scene sceneID="Gxv-sk-zZU">
+            <objects>
+                <viewController id="7M8-FH-xy9" customClass="CardViewController" customModule="RecycleVision" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="69s-HT-58d"/>
-                        <viewControllerLayoutGuide type="bottom" id="xjn-7N-4Ho"/>
+                        <viewControllerLayoutGuide type="top" id="xOw-l6-IBP"/>
+                        <viewControllerLayoutGuide type="bottom" id="tIg-6I-kic"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="n5L-2R-nYd">
+                    <view key="view" contentMode="scaleToFill" id="cBJ-dS-uvp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ph3-TO-ue3">
-                                <rect key="frame" x="67" y="145" width="240" height="319"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.77442070578231292" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7a-zc-dPW">
+                                <rect key="frame" x="22" y="124" width="330" height="418"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yo! Plastic is recyclable. You can drop it off at the nearest location here." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULZ-MM-GmE">
+                                        <rect key="frame" x="8" y="180.5" width="314" height="169"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="169" id="Vde-oB-lay"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Plastic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVT-gI-MO5">
+                                        <rect key="frame" x="102" y="151" width="138" height="21.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="138" id="MR0-p9-Nlz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Muli-SemiBold" family="Muli" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kM-ob-N9u">
+                                        <rect key="frame" x="8" y="357" width="314" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="PEx-fP-Dwg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EarthinCircle" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-U1-aLI">
+                                        <rect key="frame" x="115" y="8" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="mNq-5S-T0e"/>
+                                            <constraint firstAttribute="height" constant="100" id="rAm-68-3gZ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1887655258" green="0.76000612970000003" blue="0.64645141360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="nAp-U1-aLI" firstAttribute="top" secondItem="b7a-zc-dPW" secondAttribute="topMargin" id="7LJ-Ba-Xnw"/>
+                                    <constraint firstItem="ULZ-MM-GmE" firstAttribute="centerX" secondItem="1kM-ob-N9u" secondAttribute="centerX" id="82p-tT-uRU"/>
+                                    <constraint firstItem="1kM-ob-N9u" firstAttribute="top" secondItem="ULZ-MM-GmE" secondAttribute="bottom" constant="8" symbolic="YES" id="AK4-nY-kmC"/>
+                                    <constraint firstItem="dVT-gI-MO5" firstAttribute="top" secondItem="nAp-U1-aLI" secondAttribute="bottom" constant="43" id="Rtb-JM-IlE"/>
+                                    <constraint firstItem="nAp-U1-aLI" firstAttribute="centerX" secondItem="b7a-zc-dPW" secondAttribute="centerX" id="TLO-ri-HTS"/>
+                                    <constraint firstItem="ULZ-MM-GmE" firstAttribute="centerX" secondItem="nAp-U1-aLI" secondAttribute="centerX" id="kTp-v0-2YF"/>
+                                    <constraint firstItem="ULZ-MM-GmE" firstAttribute="top" secondItem="dVT-gI-MO5" secondAttribute="bottom" constant="8" symbolic="YES" id="o91-du-8mX"/>
+                                    <constraint firstItem="ULZ-MM-GmE" firstAttribute="leading" secondItem="b7a-zc-dPW" secondAttribute="leadingMargin" id="zBb-wa-5b8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1137254902" green="0.25882352939999997" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b7a-zc-dPW" firstAttribute="top" secondItem="xOw-l6-IBP" secondAttribute="bottom" constant="60" id="2h9-DS-4Ha"/>
+                            <constraint firstItem="b7a-zc-dPW" firstAttribute="centerY" secondItem="cBJ-dS-uvp" secondAttribute="centerY" id="TE7-ue-UlP"/>
+                            <constraint firstItem="b7a-zc-dPW" firstAttribute="leading" secondItem="cBJ-dS-uvp" secondAttribute="leadingMargin" constant="6" id="UiT-57-vyn"/>
+                            <constraint firstItem="b7a-zc-dPW" firstAttribute="centerX" secondItem="cBJ-dS-uvp" secondAttribute="centerX" id="suO-Fb-Qqy"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="boF-Wt-iCT">
+                        <barButtonItem key="leftBarButtonItem" title="Thanks!" id="2Lc-js-trc">
+                            <color key="tintColor" red="0.11474486440420151" green="0.2570977509021759" blue="0.35693573951721191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Description" destination="ULZ-MM-GmE" id="RXH-Xy-hIu"/>
+                        <outlet property="location" destination="1kM-ob-N9u" id="N96-gQ-AZz"/>
+                        <outlet property="materialIcon" destination="nAp-U1-aLI" id="LAp-HS-ji0"/>
+                        <outlet property="materialName" destination="dVT-gI-MO5" id="zkq-R8-mES"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yZy-hK-62s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqD-qT-dTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992.8" y="-468.21589205397305"/>
+            <point key="canvasLocation" x="2908" y="-468.21589205397305"/>
         </scene>
         <!--Recycle-->
         <scene sceneID="k5q-bV-Ypa">
@@ -64,7 +154,7 @@
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="fUI-6d-wWG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fUI-6d-wWG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -78,4 +168,7 @@
             <point key="canvasLocation" x="189.59999999999999" y="-468.21589205397305"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="EarthinCircle" width="700" height="700"/>
+    </resources>
 </document>

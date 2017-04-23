@@ -14,17 +14,27 @@ import Parse
 class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
    
     var captureButton: SwiftyRecordButton!
+    var goOn = 0
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        cameraDelegate = self
+        
+        captureButton = SwiftyRecordButton(frame: CGRect(x: view.frame.midX - 37.5, y: view.frame.height - 150.0, width: 75.0, height: 75.0))
+        captureButton.delegate = self
+        self.view.addSubview(captureButton)
+       
+    }
     
     static func demoCustomNib(title: String, body: String) {
         
         let view: RecyclableDialogView = try! SwiftMessages.viewFromNib()
         view.configureDropShadow()
         view.cancelAction = { _ in SwiftMessages.hide() }
-        view.MoreInfoAction = { SwiftMessages.hide() }
+        view.moreInfoAction = { SwiftMessages.hide() }
         view.headerLabel.text = title
         view.descriptionLabel.text = body
-        
-        
         var config = SwiftMessages.defaultConfig
         config.presentationContext = .window(windowLevel: UIWindowLevelStatusBar)
         config.duration = .forever

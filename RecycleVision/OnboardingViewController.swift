@@ -45,6 +45,15 @@ class OnboardingViewController: UIViewController, FBSDKLoginButtonDelegate {
         SwiftMessages.show(view: error)
     }
     
+    func showSuccessMessage() {
+        let s = MessageView.viewFromNib(layout: .CardView)
+        s.configureTheme(.success)
+        s.configureContent(title: "Congrats!", body: "You created an account with RecycleVision")
+        s.button?.isHidden = true
+        
+        SwiftMessages.show(view: s)
+    }
+    
     // MARK: - FacebookLogin
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error?) {
         
@@ -117,6 +126,11 @@ class OnboardingViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
+    func gotoHome() {
+        showSuccessMessage()
+        performSegue(withIdentifier: "LoginSegue", sender: nil)
+    }
+    
     // MARK: - Login
     func runLoginActions() {
         print("running login")
@@ -150,7 +164,7 @@ class OnboardingViewController: UIViewController, FBSDKLoginButtonDelegate {
                 // Actually save now
                 return self.updateUserWithData(user: u)
             }.then { _ in
-                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+                self.gotoHome()
             }.catch { _ in
                 self.showErorrMessage()
             }

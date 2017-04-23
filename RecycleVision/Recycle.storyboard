@@ -71,8 +71,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7a-zc-dPW">
                                 <rect key="frame" x="22" y="124" width="330" height="418"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yo! Plastic is recyclable. You can drop it off at the nearest location here." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULZ-MM-GmE">
-                                        <rect key="frame" x="8" y="180.5" width="314" height="169"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yo! This is recyclable. You can drop it off at the nearest location here." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULZ-MM-GmE">
+                                        <rect key="frame" x="8" y="181" width="314" height="169"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="169" id="Vde-oB-lay"/>
                                         </constraints>
@@ -89,10 +89,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kM-ob-N9u">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: Recycle Can" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kM-ob-N9u">
                                         <rect key="frame" x="8" y="357" width="314" height="53"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="53" id="PEx-fP-Dwg"/>
+                                            <constraint firstAttribute="height" constant="53" id="OO6-Bq-Q7U"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -109,18 +109,29 @@
                                 <color key="backgroundColor" red="0.1887655258" green="0.76000612970000003" blue="0.64645141360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="nAp-U1-aLI" firstAttribute="top" secondItem="b7a-zc-dPW" secondAttribute="topMargin" id="7LJ-Ba-Xnw"/>
-                                    <constraint firstItem="ULZ-MM-GmE" firstAttribute="centerX" secondItem="1kM-ob-N9u" secondAttribute="centerX" id="82p-tT-uRU"/>
-                                    <constraint firstItem="1kM-ob-N9u" firstAttribute="top" secondItem="ULZ-MM-GmE" secondAttribute="bottom" constant="8" symbolic="YES" id="AK4-nY-kmC"/>
                                     <constraint firstItem="dVT-gI-MO5" firstAttribute="top" secondItem="nAp-U1-aLI" secondAttribute="bottom" constant="43" id="Rtb-JM-IlE"/>
                                     <constraint firstItem="nAp-U1-aLI" firstAttribute="centerX" secondItem="b7a-zc-dPW" secondAttribute="centerX" id="TLO-ri-HTS"/>
+                                    <constraint firstItem="1kM-ob-N9u" firstAttribute="leading" secondItem="ULZ-MM-GmE" secondAttribute="leading" id="he8-Li-HrX"/>
                                     <constraint firstItem="ULZ-MM-GmE" firstAttribute="centerX" secondItem="nAp-U1-aLI" secondAttribute="centerX" id="kTp-v0-2YF"/>
+                                    <constraint firstItem="1kM-ob-N9u" firstAttribute="trailing" secondItem="ULZ-MM-GmE" secondAttribute="trailing" id="mxj-5y-QVN"/>
                                     <constraint firstItem="ULZ-MM-GmE" firstAttribute="top" secondItem="dVT-gI-MO5" secondAttribute="bottom" constant="8" symbolic="YES" id="o91-du-8mX"/>
+                                    <constraint firstItem="1kM-ob-N9u" firstAttribute="bottom" secondItem="b7a-zc-dPW" secondAttribute="bottomMargin" id="pps-a8-lHO"/>
                                     <constraint firstItem="ULZ-MM-GmE" firstAttribute="leading" secondItem="b7a-zc-dPW" secondAttribute="leadingMargin" id="zBb-wa-5b8"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbf-7o-Uba">
+                                <rect key="frame" x="137" y="580" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Find Locations">
+                                    <color key="titleColor" red="0.1887655258" green="0.76000612970000003" blue="0.64645141360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationsPressed:" destination="7M8-FH-xy9" eventType="touchUpInside" id="WkG-iG-wVu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1137254902" green="0.25882352939999997" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -131,8 +142,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="boF-Wt-iCT">
-                        <barButtonItem key="leftBarButtonItem" title="Thanks!" id="2Lc-js-trc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2Lc-js-trc">
                             <color key="tintColor" red="0.11474486440420151" green="0.2570977509021759" blue="0.35693573951721191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="lzU-kL-fcy" kind="unwind" unwindAction="unwindToRecycleWithSegue:" id="Yia-CR-Xbu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="drb-WE-c4o">
+                            <color key="tintColor" red="0.1137254902" green="0.25882352939999997" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="sharePressed:" destination="7M8-FH-xy9" id="7qm-9r-oX7"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -143,14 +163,17 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqD-qT-dTt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lzU-kL-fcy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2908" y="-468.21589205397305"/>
         </scene>
-        <!--Recycle-->
+        <!--Scan-->
         <scene sceneID="k5q-bV-Ypa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mb4-NS-T8O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recycle" id="AZv-F2-2KP"/>
+                    <tabBarItem key="tabBarItem" title="Scan" image="scan" selectedImage="scan" id="AZv-F2-2KP">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -170,5 +193,6 @@
     </scenes>
     <resources>
         <image name="EarthinCircle" width="700" height="700"/>
+        <image name="scan" width="30" height="30"/>
     </resources>
 </document>

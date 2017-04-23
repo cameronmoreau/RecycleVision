@@ -12,6 +12,7 @@ import SwiftMessages
 class RecyclableDialogView: MessageView {
     
 
+    @IBOutlet weak var moreInfoButton: UIButton!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     

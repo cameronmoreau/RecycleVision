@@ -26,8 +26,8 @@
 		868B4DE01EABEAC700F34CC4 /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 868B4DDF1EABEAC700F34CC4 /* Muli-SemiBold.ttf */; };
 		868B4DE21EABEAD000F34CC4 /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 868B4DE11EABEAD000F34CC4 /* Muli-Light.ttf */; };
 		868B4DE41EABEADA00F34CC4 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 868B4DE31EABEADA00F34CC4 /* Muli-Bold.ttf */; };
-		A382D24C1EAC114C000AE261 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382D24B1EAC114C000AE261 /* ProfileViewController.swift */; };
 		86E251DB1EAC765D0002E89A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E251DA1EAC765D0002E89A /* Assets.xcassets */; };
+		A382D24C1EAC114C000AE261 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382D24B1EAC114C000AE261 /* ProfileViewController.swift */; };
 		A3DD6E801EABF3A4008DE9AB /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DD6E7F1EABF3A4008DE9AB /* SwiftyRecordButton.swift */; };
 		A3EA79E01EABE70800B5C405 /* RecycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EA79DF1EABE70800B5C405 /* RecycleViewController.swift */; };
 		C2447884B147647BD0FD1C38 /* Pods_RecycleVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 517E5B41B8B43E1489D5A4C9 /* Pods_RecycleVision.framework */; };
@@ -56,8 +56,8 @@
 		868B4DDF1EABEAC700F34CC4 /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
 		868B4DE11EABEAD000F34CC4 /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
 		868B4DE31EABEADA00F34CC4 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
-		A382D24B1EAC114C000AE261 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		86E251DA1EAC765D0002E89A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A382D24B1EAC114C000AE261 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A3DD6E7F1EABF3A4008DE9AB /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
 		A3EA79DF1EABE70800B5C405 /* RecycleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecycleViewController.swift; sourceTree = "<group>"; };
 		B55CAB4C2B5FE72BEC746A5B /* Pods-RecycleVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecycleVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecycleVision/Pods-RecycleVision.release.xcconfig"; sourceTree = "<group>"; };

@@ -6,6 +6,7 @@ target 'RecycleVision' do
   pod 'ParseFacebookUtilsV4', '~> 1.11.1'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
 
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
   pod 'SwiftyCam', '~> 2.2.1'

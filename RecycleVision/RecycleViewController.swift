@@ -14,16 +14,23 @@ import Parse
 class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
    
     var captureButton: SwiftyRecordButton!
+    var takenImage: UIImage!
+    var takenLabel: String!
     
-    static func demoCustomNib(vc: RecycleViewController, title: String, body: String) {
+    func openPopup(title: String, body: String, showInfo: Bool) {
         
         let view: RecyclableDialogView = try! SwiftMessages.viewFromNib()
         view.configureDropShadow()
         view.cancelAction = { _ in SwiftMessages.hide() }
         view.moreInfoAction = {
             SwiftMessages.hide()
-            vc.gotoMoreInfo()
+            self.gotoMoreInfo()
         }
+        
+        if !showInfo {
+            view.moreInfoButton.isHidden = true
+        }
+        
         view.headerLabel.text = title
         view.descriptionLabel.text = body
         var config = SwiftMessages.defaultConfig
@@ -88,6 +95,9 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
                             let pass = data["isRecycleable"] as? Bool ?? false
                             let type = data["type"] as? String ?? ""
                             
+                            self.takenLabel = type
+                            self.takenImage = resizedPhoto
+                            
                             var title: String!
                             var body: String!
                             
@@ -99,7 +109,7 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
                                 body = "This looks like \(type), which is not recycleable"
                             }
                             
-                            RecycleViewController.demoCustomNib(vc: self, title: title, body: body)
+                            self.openPopup(title: title, body: body, showInfo: pass)
                         }
                     })
                 }
@@ -153,5 +163,13 @@ class RecycleViewController: SwiftyCamViewController, SwiftyCamViewControllerDel
                 focusView.removeFromSuperview()
             })
         })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MoreInfoSegue" {
+            let vc = (segue.destination as! UINavigationController).topViewController as! CardViewController
+            vc.takenLabel = self.takenLabel
+            vc.takenImage = self.takenImage
+        }
     }
 }

@@ -126,6 +126,7 @@
                 <outlet property="backgroundView" destination="tfV-Bn-J2F" id="jzo-KY-232"/>
                 <outlet property="descriptionLabel" destination="MQd-R1-OwN" id="Nuw-sH-71b"/>
                 <outlet property="headerLabel" destination="cpD-aI-X9T" id="K2o-bO-voy"/>
+                <outlet property="moreInfoButton" destination="9ZG-7M-1o4" id="6X0-Hs-yw3"/>
                 <outlet property="titleLabel" destination="cpD-aI-X9T" id="znl-Sz-9qH"/>
             </connections>
             <point key="canvasLocation" x="27.5" y="567.5"/>

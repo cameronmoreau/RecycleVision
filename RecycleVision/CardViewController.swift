@@ -8,14 +8,20 @@
 
 import UIKit
 import MapKit
+import FBSDKShareKit
 
 class CardViewController: UIViewController {
     
     
     @IBAction func sharePressed(_ sender: UIBarButtonItem) {
+        let sharePhoto = FBSDKSharePhoto(image: takenImage, userGenerated: true)
+        let share = FBSDKSharePhotoContent()
+        share.photos = [sharePhoto]
         
-        
-        
+        let d = FBSDKShareDialog()
+        d.fromViewController = self
+        d.shareContent = share
+        d.show()
     }
     @IBAction func locationsPressed(_ sender: UIButton) {
         
@@ -32,6 +38,9 @@ class CardViewController: UIViewController {
     @IBOutlet var materialName: UILabel!
     @IBOutlet var Description: UILabel!
     @IBOutlet var location: UILabel!
+    
+    var takenImage: UIImage!
+    var takenLabel: String!
     
     
     // I'm too lazzzy to make an model
@@ -58,31 +67,32 @@ class CardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var name = "metals"
-        switch(name){
-        case material.0:
-            materialIcon.image = materialImage.0
-            materialName.text = material.0
-           
-        case material.1:
-            materialIcon.image = materialImage.1
-            materialName.text = material.1
-        case material.2:
-            materialIcon.image = materialImage.0
-            materialName.text = material.2
-        case material.3:
-            materialIcon.image = materialImage.1
-            materialName.text = material.3
-        case material.4:
-            materialIcon.image = materialImage.0
-            materialName.text = material.4
-        case material.5:
-            materialIcon.image = materialImage.1
-            materialName.text = material.5
-        default:
-            materialIcon.image = materialImage.1
-            materialName.text = material.0
-        }
+        
+        
+//        switch(name){
+//        case material.0:
+//            materialIcon.image = materialImage.0
+//            materialName.text = material.0
+//           
+//        case material.1:
+//            materialIcon.image = materialImage.1
+//            materialName.text = material.1
+//        case material.2:
+//            materialIcon.image = materialImage.0
+//            materialName.text = material.2
+//        case material.3:
+//            materialIcon.image = materialImage.1
+//            materialName.text = material.3
+//        case material.4:
+//            materialIcon.image = materialImage.0
+//            materialName.text = material.4
+//        case material.5:
+//            materialIcon.image = materialImage.1
+//            materialName.text = material.5
+//        default:
+//            materialIcon.image = materialImage.1
+//            materialName.text = material.0
+//        }
     }
 
     override func didReceiveMemoryWarning() {

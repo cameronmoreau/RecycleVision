@@ -4,7 +4,7 @@ For HackDFW/Earthack 2017. So we built it in 24 hours.
 
 An iOS app that uses machine learning and computer vision to promote recycling. Scan an item to find out which category, if any, of recycling it belongs in. Earn points and compete with your friends.
 
-[Video Link](https://youtu.be/DPuXocTUUic)
+[Video Demo](https://youtu.be/DPuXocTUUic) - [Project Link](https://devpost.com/software/recyclevision)
 
 ### Libraries
 - Spring
